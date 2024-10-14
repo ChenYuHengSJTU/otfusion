@@ -1,0 +1,1684 @@
+dumping parameters at  /mnt/nas2/home/chenyuheng/otfusion/configurations
+Initialize VanillaVAE track_running_stats:False bias:True
+Initialize VanillaVAE track_running_stats:False bias:True
+excluded
+set forward hook for layer named:  encoder
+set forward hook for layer named:  encoder.0
+set forward hook for layer named:  encoder.0.0
+set forward hook for layer named:  encoder.0.1
+set forward hook for layer named:  encoder.0.2
+set forward hook for layer named:  encoder.1
+set forward hook for layer named:  encoder.1.0
+set forward hook for layer named:  encoder.1.1
+set forward hook for layer named:  encoder.1.2
+set forward hook for layer named:  encoder.2
+set forward hook for layer named:  encoder.2.0
+set forward hook for layer named:  encoder.2.1
+set forward hook for layer named:  encoder.2.2
+set forward hook for layer named:  encoder.3
+set forward hook for layer named:  encoder.3.0
+set forward hook for layer named:  encoder.3.1
+set forward hook for layer named:  encoder.3.2
+set forward hook for layer named:  encoder.4
+set forward hook for layer named:  encoder.4.0
+set forward hook for layer named:  encoder.4.1
+set forward hook for layer named:  encoder.4.2
+set forward hook for layer named:  encoder.5
+set forward hook for layer named:  encoder.5.0
+set forward hook for layer named:  encoder.5.1
+set forward hook for layer named:  encoder.5.2
+set forward hook for layer named:  fc_mu
+set forward hook for layer named:  fc_var
+set forward hook for layer named:  decoder_input
+set forward hook for layer named:  decoder
+set forward hook for layer named:  decoder.0
+set forward hook for layer named:  decoder.0.0
+set forward hook for layer named:  decoder.0.1
+set forward hook for layer named:  decoder.0.2
+set forward hook for layer named:  decoder.1
+set forward hook for layer named:  decoder.1.0
+set forward hook for layer named:  decoder.1.1
+set forward hook for layer named:  decoder.1.2
+set forward hook for layer named:  decoder.2
+set forward hook for layer named:  decoder.2.0
+set forward hook for layer named:  decoder.2.1
+set forward hook for layer named:  decoder.2.2
+set forward hook for layer named:  decoder.3
+set forward hook for layer named:  decoder.3.0
+set forward hook for layer named:  decoder.3.1
+set forward hook for layer named:  decoder.3.2
+set forward hook for layer named:  decoder.4
+set forward hook for layer named:  decoder.4.0
+set forward hook for layer named:  decoder.4.1
+set forward hook for layer named:  decoder.4.2
+set forward hook for layer named:  final_layer
+set forward hook for layer named:  final_layer.0
+set forward hook for layer named:  final_layer.1
+set forward hook for layer named:  final_layer.2
+set forward hook for layer named:  final_layer.3
+set forward hook for layer named:  final_layer.4
+excluded
+set forward hook for layer named:  encoder
+set forward hook for layer named:  encoder.0
+set forward hook for layer named:  encoder.0.0
+set forward hook for layer named:  encoder.0.1
+set forward hook for layer named:  encoder.0.2
+set forward hook for layer named:  encoder.1
+set forward hook for layer named:  encoder.1.0
+set forward hook for layer named:  encoder.1.1
+set forward hook for layer named:  encoder.1.2
+set forward hook for layer named:  encoder.2
+set forward hook for layer named:  encoder.2.0
+set forward hook for layer named:  encoder.2.1
+set forward hook for layer named:  encoder.2.2
+set forward hook for layer named:  encoder.3
+set forward hook for layer named:  encoder.3.0
+set forward hook for layer named:  encoder.3.1
+set forward hook for layer named:  encoder.3.2
+set forward hook for layer named:  encoder.4
+set forward hook for layer named:  encoder.4.0
+set forward hook for layer named:  encoder.4.1
+set forward hook for layer named:  encoder.4.2
+set forward hook for layer named:  encoder.5
+set forward hook for layer named:  encoder.5.0
+set forward hook for layer named:  encoder.5.1
+set forward hook for layer named:  encoder.5.2
+set forward hook for layer named:  fc_mu
+set forward hook for layer named:  fc_var
+set forward hook for layer named:  decoder_input
+set forward hook for layer named:  decoder
+set forward hook for layer named:  decoder.0
+set forward hook for layer named:  decoder.0.0
+set forward hook for layer named:  decoder.0.1
+set forward hook for layer named:  decoder.0.2
+set forward hook for layer named:  decoder.1
+set forward hook for layer named:  decoder.1.0
+set forward hook for layer named:  decoder.1.1
+set forward hook for layer named:  decoder.1.2
+set forward hook for layer named:  decoder.2
+set forward hook for layer named:  decoder.2.0
+set forward hook for layer named:  decoder.2.1
+set forward hook for layer named:  decoder.2.2
+set forward hook for layer named:  decoder.3
+set forward hook for layer named:  decoder.3.0
+set forward hook for layer named:  decoder.3.1
+set forward hook for layer named:  decoder.3.2
+set forward hook for layer named:  decoder.4
+set forward hook for layer named:  decoder.4.0
+set forward hook for layer named:  decoder.4.1
+set forward hook for layer named:  decoder.4.2
+set forward hook for layer named:  final_layer
+set forward hook for layer named:  final_layer.0
+set forward hook for layer named:  final_layer.1
+set forward hook for layer named:  final_layer.2
+set forward hook for layer named:  final_layer.3
+set forward hook for layer named:  final_layer.4
+dict_keys(['encoder.0.0', 'encoder.0.1', 'encoder.0.2', 'encoder.0', 'encoder.1.0', 'encoder.1.1', 'encoder.1.2', 'encoder.1', 'encoder.2.0', 'encoder.2.1', 'encoder.2.2', 'encoder.2', 'encoder.3.0', 'encoder.3.1', 'encoder.3.2', 'encoder.3', 'encoder.4.0', 'encoder.4.1', 'encoder.4.2', 'encoder.4', 'encoder.5.0', 'encoder.5.1', 'encoder.5.2', 'encoder.5', 'encoder', 'fc_mu', 'fc_var', 'decoder_input', 'decoder.0.0', 'decoder.0.1', 'decoder.0.2', 'decoder.0', 'decoder.1.0', 'decoder.1.1', 'decoder.1.2', 'decoder.1', 'decoder.2.0', 'decoder.2.1', 'decoder.2.2', 'decoder.2', 'decoder.3.0', 'decoder.3.1', 'decoder.3.2', 'decoder.3', 'decoder.4.0', 'decoder.4.1', 'decoder.4.2', 'decoder.4', 'decoder', 'final_layer.0', 'final_layer.1', 'final_layer.2', 'final_layer.3', 'final_layer.4', 'final_layer'])
+number of layers is  56
+
+------------------------------------ At layer index 0 ----------------------------------- 
+ 
+layer names are  encoder.0.0.weight encoder.0.0.weight
+Previous layer shape is  None
+Current layer shape is  torch.Size([32, 3, 3, 3])
+let's see the difference in layer names encoder.0.0.weight encoder.0.0 encoder.0.0
+torch.Size([64, 32, 32, 32]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 32, 32, 64])
+In layer encoder.0.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 15.311094284057617, Mean : 13.933403015136719, Min : 12.560840606689453, Std: 0.5994142889976501
+returns a uniform measure of cardinality:  32
+returns a uniform measure of cardinality:  32
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  65536
+# of ground metric features in 0 is   65536
+# of ground metric features in 1 is   65536
+ground metric (m0) is  tensor([[12.4217, 11.5057, 11.1919,  ..., 13.6364, 10.4749, 13.9255],
+        [ 9.6166,  9.4051, 13.0004,  ..., 12.4432, 11.1931, 12.9434],
+        [13.7155, 13.2522, 10.5767,  ..., 14.4296, 12.8814, 14.6304],
+        ...,
+        [12.6100, 13.1993, 14.3273,  ...,  9.7744, 13.5458,  7.6707],
+        [12.2008, 12.9201, 14.1713,  ...,  9.2225, 13.2919, 10.0153],
+        [13.3997, 13.8232, 14.7074,  ..., 11.9738, 14.0845, 11.0787]],
+       device='cuda:0')
+mu shape:  (32,)  nu shape:  (32,)  M0 shape:  torch.Size([32, 32])
+shape of T_var is  torch.Size([32, 32])
+T_var before correction  tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.]], device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.1250, device='cuda:0')
+Here, trace is 0.125 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([32, 3, 9])
+Shape of fc_layer0_weight_data is  torch.Size([32, 3, 9])
+
+------------------------------------ At layer index 1 ----------------------------------- 
+ 
+layer names are  encoder.0.0.bias encoder.0.0.bias
+Previous layer shape is  torch.Size([32, 3, 3, 3])
+Current layer shape is  torch.Size([32])
+let's see the difference in layer names encoder.0.0.bias encoder.0.0 encoder.0.0
+torch.Size([64, 32, 32, 32]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 32, 32, 64])
+handling bias term
+In layer encoder.0.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 15.311094284057617, Mean : 13.933403015136719, Min : 12.560840606689453, Std: 0.5994142889976501
+shape of layer: model 0 torch.Size([32])
+shape of layer: model 1 torch.Size([32])
+shape of activations: model 0 torch.Size([32, 32, 32, 64])
+shape of activations: model 1 torch.Size([32, 32, 32, 64])
+shape of previous transport map torch.Size([32, 32])
+
+------------------------------------ At layer index 2 ----------------------------------- 
+ 
+layer names are  encoder.0.1.weight encoder.0.1.weight
+Previous layer shape is  torch.Size([32])
+Current layer shape is  torch.Size([32])
+let's see the difference in layer names encoder.0.1.weight encoder.0.1 encoder.0.1
+torch.Size([64, 32, 32, 32]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 32, 32, 64])
+handling bias term
+In layer encoder.0.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 4.662952899932861, Mean : 3.7675342559814453, Min : 3.0295588970184326, Std: 0.3436571955680847
+shape of layer: model 0 torch.Size([32])
+shape of layer: model 1 torch.Size([32])
+shape of activations: model 0 torch.Size([32, 32, 32, 64])
+shape of activations: model 1 torch.Size([32, 32, 32, 64])
+shape of previous transport map torch.Size([32, 32])
+
+------------------------------------ At layer index 3 ----------------------------------- 
+ 
+layer names are  encoder.0.1.bias encoder.0.1.bias
+Previous layer shape is  torch.Size([32])
+Current layer shape is  torch.Size([32])
+let's see the difference in layer names encoder.0.1.bias encoder.0.1 encoder.0.1
+torch.Size([64, 32, 32, 32]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 32, 32, 64])
+handling bias term
+In layer encoder.0.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 4.662952899932861, Mean : 3.7675342559814453, Min : 3.0295588970184326, Std: 0.3436571955680847
+shape of layer: model 0 torch.Size([32])
+shape of layer: model 1 torch.Size([32])
+shape of activations: model 0 torch.Size([32, 32, 32, 64])
+shape of activations: model 1 torch.Size([32, 32, 32, 64])
+shape of previous transport map torch.Size([32, 32])
+
+------------------------------------ At layer index 4 ----------------------------------- 
+ 
+layer names are  encoder.1.0.weight encoder.1.0.weight
+Previous layer shape is  torch.Size([32])
+Current layer shape is  torch.Size([64, 32, 3, 3])
+let's see the difference in layer names encoder.1.0.weight encoder.1.0 encoder.1.0
+torch.Size([64, 64, 16, 16]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([64, 16, 16, 64])
+In layer encoder.1.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 63.23054885864258, Mean : 50.145050048828125, Min : 39.601219177246094, Std: 5.069332122802734
+shape of layer: model 0 torch.Size([64, 32, 9])
+shape of layer: model 1 torch.Size([64, 32, 9])
+shape of activations: model 0 torch.Size([64, 16, 16, 64])
+shape of activations: model 1 torch.Size([64, 16, 16, 64])
+shape of previous transport map torch.Size([32, 32])
+returns a uniform measure of cardinality:  64
+returns a uniform measure of cardinality:  64
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  16384
+# of ground metric features in 0 is   16384
+# of ground metric features in 1 is   16384
+ground metric (m0) is  tensor([[14.2931, 14.7346, 14.2033,  ..., 14.4614, 14.3487, 14.3736],
+        [13.5054, 14.6933, 13.4980,  ..., 13.6320, 13.4964, 14.6389],
+        [15.3059, 14.4864, 15.3294,  ..., 15.4229, 15.3771, 13.4994],
+        ...,
+        [13.8766, 14.7062, 13.7542,  ..., 14.0362, 13.9005, 14.5766],
+        [13.4720, 14.6293, 13.4338,  ..., 13.7069, 13.5689, 14.5273],
+        [16.1018, 15.5159, 16.2859,  ..., 16.1143, 16.1715, 15.9112]],
+       device='cuda:0')
+mu shape:  (64,)  nu shape:  (64,)  M0 shape:  torch.Size([64, 64])
+shape of T_var is  torch.Size([64, 64])
+T_var before correction  tensor([[0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0156, 0.0000,  ..., 0.0000, 0.0000, 0.0000]],
+       device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.0625, device='cuda:0')
+Here, trace is 0.0625 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([64, 32, 9])
+Shape of fc_layer0_weight_data is  torch.Size([64, 32, 9])
+
+------------------------------------ At layer index 5 ----------------------------------- 
+ 
+layer names are  encoder.1.0.bias encoder.1.0.bias
+Previous layer shape is  torch.Size([64, 32, 3, 3])
+Current layer shape is  torch.Size([64])
+let's see the difference in layer names encoder.1.0.bias encoder.1.0 encoder.1.0
+torch.Size([64, 64, 16, 16]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([64, 16, 16, 64])
+handling bias term
+In layer encoder.1.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 63.23054885864258, Mean : 50.145050048828125, Min : 39.601219177246094, Std: 5.069332122802734
+shape of layer: model 0 torch.Size([64])
+shape of layer: model 1 torch.Size([64])
+shape of activations: model 0 torch.Size([64, 16, 16, 64])
+shape of activations: model 1 torch.Size([64, 16, 16, 64])
+shape of previous transport map torch.Size([64, 64])
+
+------------------------------------ At layer index 6 ----------------------------------- 
+ 
+layer names are  encoder.1.1.weight encoder.1.1.weight
+Previous layer shape is  torch.Size([64])
+Current layer shape is  torch.Size([64])
+let's see the difference in layer names encoder.1.1.weight encoder.1.1 encoder.1.1
+torch.Size([64, 64, 16, 16]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([64, 16, 16, 64])
+handling bias term
+In layer encoder.1.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 3.8383431434631348, Mean : 3.1824867725372314, Min : 2.6072144508361816, Std: 0.26402747631073
+shape of layer: model 0 torch.Size([64])
+shape of layer: model 1 torch.Size([64])
+shape of activations: model 0 torch.Size([64, 16, 16, 64])
+shape of activations: model 1 torch.Size([64, 16, 16, 64])
+shape of previous transport map torch.Size([64, 64])
+
+------------------------------------ At layer index 7 ----------------------------------- 
+ 
+layer names are  encoder.1.1.bias encoder.1.1.bias
+Previous layer shape is  torch.Size([64])
+Current layer shape is  torch.Size([64])
+let's see the difference in layer names encoder.1.1.bias encoder.1.1 encoder.1.1
+torch.Size([64, 64, 16, 16]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([64, 16, 16, 64])
+handling bias term
+In layer encoder.1.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 3.8383431434631348, Mean : 3.1824867725372314, Min : 2.6072144508361816, Std: 0.26402747631073
+shape of layer: model 0 torch.Size([64])
+shape of layer: model 1 torch.Size([64])
+shape of activations: model 0 torch.Size([64, 16, 16, 64])
+shape of activations: model 1 torch.Size([64, 16, 16, 64])
+shape of previous transport map torch.Size([64, 64])
+
+------------------------------------ At layer index 8 ----------------------------------- 
+ 
+layer names are  encoder.2.0.weight encoder.2.0.weight
+Previous layer shape is  torch.Size([64])
+Current layer shape is  torch.Size([128, 64, 3, 3])
+let's see the difference in layer names encoder.2.0.weight encoder.2.0 encoder.2.0
+torch.Size([64, 128, 8, 8]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([128, 8, 8, 64])
+In layer encoder.2.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 55.84556198120117, Mean : 45.350860595703125, Min : 36.33408737182617, Std: 4.192963600158691
+shape of layer: model 0 torch.Size([128, 64, 9])
+shape of layer: model 1 torch.Size([128, 64, 9])
+shape of activations: model 0 torch.Size([128, 8, 8, 64])
+shape of activations: model 1 torch.Size([128, 8, 8, 64])
+shape of previous transport map torch.Size([64, 64])
+returns a uniform measure of cardinality:  128
+returns a uniform measure of cardinality:  128
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  4096
+# of ground metric features in 0 is   4096
+# of ground metric features in 1 is   4096
+ground metric (m0) is  tensor([[13.8359, 13.1831, 14.1167,  ..., 12.4373, 12.7914, 13.0332],
+        [14.0908, 13.4860, 14.3092,  ..., 11.6528, 13.6057, 13.6463],
+        [14.3913, 13.1086, 14.6383,  ..., 12.5858, 13.4446, 13.4728],
+        ...,
+        [14.8445, 14.8419, 15.0050,  ..., 14.1760, 14.9825, 14.9929],
+        [14.2670, 13.2847, 14.5197,  ..., 13.8507, 12.4709, 12.9021],
+        [14.5815, 12.8407, 14.8050,  ..., 12.9873, 13.3125, 13.1107]],
+       device='cuda:0')
+mu shape:  (128,)  nu shape:  (128,)  M0 shape:  torch.Size([128, 128])
+shape of T_var is  torch.Size([128, 128])
+T_var before correction  tensor([[0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0078, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000]],
+       device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.0156, device='cuda:0')
+Here, trace is 0.015625 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([128, 64, 9])
+Shape of fc_layer0_weight_data is  torch.Size([128, 64, 9])
+
+------------------------------------ At layer index 9 ----------------------------------- 
+ 
+layer names are  encoder.2.0.bias encoder.2.0.bias
+Previous layer shape is  torch.Size([128, 64, 3, 3])
+Current layer shape is  torch.Size([128])
+let's see the difference in layer names encoder.2.0.bias encoder.2.0 encoder.2.0
+torch.Size([64, 128, 8, 8]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([128, 8, 8, 64])
+handling bias term
+In layer encoder.2.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 55.84556198120117, Mean : 45.350860595703125, Min : 36.33408737182617, Std: 4.192963600158691
+shape of layer: model 0 torch.Size([128])
+shape of layer: model 1 torch.Size([128])
+shape of activations: model 0 torch.Size([128, 8, 8, 64])
+shape of activations: model 1 torch.Size([128, 8, 8, 64])
+shape of previous transport map torch.Size([128, 128])
+
+------------------------------------ At layer index 10 ----------------------------------- 
+ 
+layer names are  encoder.2.1.weight encoder.2.1.weight
+Previous layer shape is  torch.Size([128])
+Current layer shape is  torch.Size([128])
+let's see the difference in layer names encoder.2.1.weight encoder.2.1 encoder.2.1
+torch.Size([64, 128, 8, 8]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([128, 8, 8, 64])
+handling bias term
+In layer encoder.2.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 2.7081332206726074, Mean : 2.216595411300659, Min : 1.7818289995193481, Std: 0.19711264967918396
+shape of layer: model 0 torch.Size([128])
+shape of layer: model 1 torch.Size([128])
+shape of activations: model 0 torch.Size([128, 8, 8, 64])
+shape of activations: model 1 torch.Size([128, 8, 8, 64])
+shape of previous transport map torch.Size([128, 128])
+
+------------------------------------ At layer index 11 ----------------------------------- 
+ 
+layer names are  encoder.2.1.bias encoder.2.1.bias
+Previous layer shape is  torch.Size([128])
+Current layer shape is  torch.Size([128])
+let's see the difference in layer names encoder.2.1.bias encoder.2.1 encoder.2.1
+torch.Size([64, 128, 8, 8]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([128, 8, 8, 64])
+handling bias term
+In layer encoder.2.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 2.7081332206726074, Mean : 2.216595411300659, Min : 1.7818289995193481, Std: 0.19711264967918396
+shape of layer: model 0 torch.Size([128])
+shape of layer: model 1 torch.Size([128])
+shape of activations: model 0 torch.Size([128, 8, 8, 64])
+shape of activations: model 1 torch.Size([128, 8, 8, 64])
+shape of previous transport map torch.Size([128, 128])
+
+------------------------------------ At layer index 12 ----------------------------------- 
+ 
+layer names are  encoder.3.0.weight encoder.3.0.weight
+Previous layer shape is  torch.Size([128])
+Current layer shape is  torch.Size([256, 128, 3, 3])
+let's see the difference in layer names encoder.3.0.weight encoder.3.0 encoder.3.0
+torch.Size([64, 256, 4, 4]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([256, 4, 4, 64])
+In layer encoder.3.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 45.68305969238281, Mean : 37.55403137207031, Min : 30.243396759033203, Std: 3.3140511512756348
+shape of layer: model 0 torch.Size([256, 128, 9])
+shape of layer: model 1 torch.Size([256, 128, 9])
+shape of activations: model 0 torch.Size([256, 4, 4, 64])
+shape of activations: model 1 torch.Size([256, 4, 4, 64])
+shape of previous transport map torch.Size([128, 128])
+returns a uniform measure of cardinality:  256
+returns a uniform measure of cardinality:  256
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  1024
+# of ground metric features in 0 is   1024
+# of ground metric features in 1 is   1024
+ground metric (m0) is  tensor([[12.8607, 11.1864, 11.5653,  ..., 12.0926, 12.8483, 12.5336],
+        [13.2103, 12.1237, 11.6567,  ..., 12.0256, 12.9956, 12.4873],
+        [11.0525, 13.1884, 12.1952,  ..., 11.8547, 11.4553, 12.5403],
+        ...,
+        [12.3219, 11.8049, 11.4380,  ..., 11.1947, 12.5035, 12.2199],
+        [11.9568, 12.7827, 12.3594,  ..., 11.8969, 12.1385, 12.2582],
+        [11.9748, 12.6058, 12.1506,  ..., 12.0908, 12.6187, 12.7819]],
+       device='cuda:0')
+mu shape:  (256,)  nu shape:  (256,)  M0 shape:  torch.Size([256, 256])
+shape of T_var is  torch.Size([256, 256])
+T_var before correction  tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.]], device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.0078, device='cuda:0')
+Here, trace is 0.0078125 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([256, 128, 9])
+Shape of fc_layer0_weight_data is  torch.Size([256, 128, 9])
+
+------------------------------------ At layer index 13 ----------------------------------- 
+ 
+layer names are  encoder.3.0.bias encoder.3.0.bias
+Previous layer shape is  torch.Size([256, 128, 3, 3])
+Current layer shape is  torch.Size([256])
+let's see the difference in layer names encoder.3.0.bias encoder.3.0 encoder.3.0
+torch.Size([64, 256, 4, 4]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([256, 4, 4, 64])
+handling bias term
+In layer encoder.3.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 45.68305969238281, Mean : 37.55403137207031, Min : 30.243396759033203, Std: 3.3140511512756348
+shape of layer: model 0 torch.Size([256])
+shape of layer: model 1 torch.Size([256])
+shape of activations: model 0 torch.Size([256, 4, 4, 64])
+shape of activations: model 1 torch.Size([256, 4, 4, 64])
+shape of previous transport map torch.Size([256, 256])
+
+------------------------------------ At layer index 14 ----------------------------------- 
+ 
+layer names are  encoder.3.1.weight encoder.3.1.weight
+Previous layer shape is  torch.Size([256])
+Current layer shape is  torch.Size([256])
+let's see the difference in layer names encoder.3.1.weight encoder.3.1 encoder.3.1
+torch.Size([64, 256, 4, 4]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([256, 4, 4, 64])
+handling bias term
+In layer encoder.3.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 2.0522475242614746, Mean : 1.6995021104812622, Min : 1.3654037714004517, Std: 0.14621151983737946
+shape of layer: model 0 torch.Size([256])
+shape of layer: model 1 torch.Size([256])
+shape of activations: model 0 torch.Size([256, 4, 4, 64])
+shape of activations: model 1 torch.Size([256, 4, 4, 64])
+shape of previous transport map torch.Size([256, 256])
+
+------------------------------------ At layer index 15 ----------------------------------- 
+ 
+layer names are  encoder.3.1.bias encoder.3.1.bias
+Previous layer shape is  torch.Size([256])
+Current layer shape is  torch.Size([256])
+let's see the difference in layer names encoder.3.1.bias encoder.3.1 encoder.3.1
+torch.Size([64, 256, 4, 4]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([256, 4, 4, 64])
+handling bias term
+In layer encoder.3.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 2.0522475242614746, Mean : 1.6995021104812622, Min : 1.3654037714004517, Std: 0.14621151983737946
+shape of layer: model 0 torch.Size([256])
+shape of layer: model 1 torch.Size([256])
+shape of activations: model 0 torch.Size([256, 4, 4, 64])
+shape of activations: model 1 torch.Size([256, 4, 4, 64])
+shape of previous transport map torch.Size([256, 256])
+
+------------------------------------ At layer index 16 ----------------------------------- 
+ 
+layer names are  encoder.4.0.weight encoder.4.0.weight
+Previous layer shape is  torch.Size([256])
+Current layer shape is  torch.Size([512, 256, 3, 3])
+let's see the difference in layer names encoder.4.0.weight encoder.4.0 encoder.4.0
+torch.Size([64, 512, 2, 2]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([512, 2, 2, 64])
+In layer encoder.4.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 47.12977981567383, Mean : 39.70530700683594, Min : 32.81575012207031, Std: 3.0676329135894775
+shape of layer: model 0 torch.Size([512, 256, 9])
+shape of layer: model 1 torch.Size([512, 256, 9])
+shape of activations: model 0 torch.Size([512, 2, 2, 64])
+shape of activations: model 1 torch.Size([512, 2, 2, 64])
+shape of previous transport map torch.Size([256, 256])
+returns a uniform measure of cardinality:  512
+returns a uniform measure of cardinality:  512
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  256
+# of ground metric features in 0 is   256
+# of ground metric features in 1 is   256
+ground metric (m0) is  tensor([[12.5963, 12.1621, 12.8202,  ..., 11.5596, 11.4844, 12.7293],
+        [13.5374, 12.1502, 13.4178,  ..., 12.3238, 12.0436, 12.7016],
+        [13.1892, 10.7122, 12.1273,  ..., 10.4834, 10.8408, 10.7307],
+        ...,
+        [13.1878, 11.9560, 11.2010,  ..., 11.6143, 11.9178, 11.1144],
+        [13.3553, 13.1904, 13.8150,  ..., 12.9994, 12.6786, 13.5435],
+        [13.3630, 10.7298, 12.2814,  ..., 11.1448, 11.3414, 10.3820]],
+       device='cuda:0')
+mu shape:  (512,)  nu shape:  (512,)  M0 shape:  torch.Size([512, 512])
+shape of T_var is  torch.Size([512, 512])
+T_var before correction  tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.]], device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0., device='cuda:0')
+Here, trace is 0.0 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([512, 256, 9])
+Shape of fc_layer0_weight_data is  torch.Size([512, 256, 9])
+
+------------------------------------ At layer index 17 ----------------------------------- 
+ 
+layer names are  encoder.4.0.bias encoder.4.0.bias
+Previous layer shape is  torch.Size([512, 256, 3, 3])
+Current layer shape is  torch.Size([512])
+let's see the difference in layer names encoder.4.0.bias encoder.4.0 encoder.4.0
+torch.Size([64, 512, 2, 2]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([512, 2, 2, 64])
+handling bias term
+In layer encoder.4.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 47.12977981567383, Mean : 39.70530700683594, Min : 32.81575012207031, Std: 3.0676329135894775
+shape of layer: model 0 torch.Size([512])
+shape of layer: model 1 torch.Size([512])
+shape of activations: model 0 torch.Size([512, 2, 2, 64])
+shape of activations: model 1 torch.Size([512, 2, 2, 64])
+shape of previous transport map torch.Size([512, 512])
+
+------------------------------------ At layer index 18 ----------------------------------- 
+ 
+layer names are  encoder.4.1.weight encoder.4.1.weight
+Previous layer shape is  torch.Size([512])
+Current layer shape is  torch.Size([512])
+let's see the difference in layer names encoder.4.1.weight encoder.4.1 encoder.4.1
+torch.Size([64, 512, 2, 2]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([512, 2, 2, 64])
+handling bias term
+In layer encoder.4.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 1.4592430591583252, Mean : 1.207249402999878, Min : 0.9634604454040527, Std: 0.10581934452056885
+shape of layer: model 0 torch.Size([512])
+shape of layer: model 1 torch.Size([512])
+shape of activations: model 0 torch.Size([512, 2, 2, 64])
+shape of activations: model 1 torch.Size([512, 2, 2, 64])
+shape of previous transport map torch.Size([512, 512])
+
+------------------------------------ At layer index 19 ----------------------------------- 
+ 
+layer names are  encoder.4.1.bias encoder.4.1.bias
+Previous layer shape is  torch.Size([512])
+Current layer shape is  torch.Size([512])
+let's see the difference in layer names encoder.4.1.bias encoder.4.1 encoder.4.1
+torch.Size([64, 512, 2, 2]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([512, 2, 2, 64])
+handling bias term
+In layer encoder.4.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 1.4592430591583252, Mean : 1.207249402999878, Min : 0.9634604454040527, Std: 0.10581934452056885
+shape of layer: model 0 torch.Size([512])
+shape of layer: model 1 torch.Size([512])
+shape of activations: model 0 torch.Size([512, 2, 2, 64])
+shape of activations: model 1 torch.Size([512, 2, 2, 64])
+shape of previous transport map torch.Size([512, 512])
+
+------------------------------------ At layer index 20 ----------------------------------- 
+ 
+layer names are  encoder.5.0.weight encoder.5.0.weight
+Previous layer shape is  torch.Size([512])
+Current layer shape is  torch.Size([1024, 512, 3, 3])
+let's see the difference in layer names encoder.5.0.weight encoder.5.0 encoder.5.0
+torch.Size([64, 1024, 1, 1]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([1024, 1, 1, 64])
+In layer encoder.5.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 19.190933227539062, Mean : 13.582109451293945, Min : 8.763545036315918, Std: 2.2590079307556152
+shape of layer: model 0 torch.Size([1024, 512, 9])
+shape of layer: model 1 torch.Size([1024, 512, 9])
+shape of activations: model 0 torch.Size([1024, 1, 1, 64])
+shape of activations: model 1 torch.Size([1024, 1, 1, 64])
+shape of previous transport map torch.Size([512, 512])
+returns a uniform measure of cardinality:  1024
+returns a uniform measure of cardinality:  1024
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  64
+# of ground metric features in 0 is   64
+# of ground metric features in 1 is   64
+ground metric (m0) is  tensor([[10.1762,  9.8123,  9.0302,  ...,  7.1986, 10.1143, 10.0826],
+        [ 6.7407,  5.8749,  7.7549,  ...,  9.2964,  6.5197,  6.1955],
+        [ 7.4467,  6.3048,  7.2793,  ...,  9.0616,  7.2888,  7.0692],
+        ...,
+        [ 7.7377,  6.6590,  6.9694,  ...,  8.9025,  7.5759,  7.4042],
+        [ 9.2525,  9.7052, 10.3021,  ..., 10.8878,  9.3502,  9.3811],
+        [ 8.0783,  6.8318,  6.1786,  ...,  8.6975,  7.9142,  7.7925]],
+       device='cuda:0')
+mu shape:  (1024,)  nu shape:  (1024,)  M0 shape:  torch.Size([1024, 1024])
+shape of T_var is  torch.Size([1024, 1024])
+T_var before correction  tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.]], device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.0010, device='cuda:0')
+Here, trace is 0.0009765625 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([1024, 512, 9])
+Shape of fc_layer0_weight_data is  torch.Size([1024, 512, 9])
+
+------------------------------------ At layer index 21 ----------------------------------- 
+ 
+layer names are  encoder.5.0.bias encoder.5.0.bias
+Previous layer shape is  torch.Size([1024, 512, 3, 3])
+Current layer shape is  torch.Size([1024])
+let's see the difference in layer names encoder.5.0.bias encoder.5.0 encoder.5.0
+torch.Size([64, 1024, 1, 1]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([1024, 1, 1, 64])
+handling bias term
+In layer encoder.5.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 19.190933227539062, Mean : 13.582109451293945, Min : 8.763545036315918, Std: 2.2590079307556152
+shape of layer: model 0 torch.Size([1024])
+shape of layer: model 1 torch.Size([1024])
+shape of activations: model 0 torch.Size([1024, 1, 1, 64])
+shape of activations: model 1 torch.Size([1024, 1, 1, 64])
+shape of previous transport map torch.Size([1024, 1024])
+
+------------------------------------ At layer index 22 ----------------------------------- 
+ 
+layer names are  encoder.5.1.weight encoder.5.1.weight
+Previous layer shape is  torch.Size([1024])
+Current layer shape is  torch.Size([1024])
+let's see the difference in layer names encoder.5.1.weight encoder.5.1 encoder.5.1
+torch.Size([64, 1024, 1, 1]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([1024, 1, 1, 64])
+handling bias term
+In layer encoder.5.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 0.398122638463974, Mean : 0.3174924850463867, Min : 0.2509309649467468, Std: 0.0309605672955513
+shape of layer: model 0 torch.Size([1024])
+shape of layer: model 1 torch.Size([1024])
+shape of activations: model 0 torch.Size([1024, 1, 1, 64])
+shape of activations: model 1 torch.Size([1024, 1, 1, 64])
+shape of previous transport map torch.Size([1024, 1024])
+
+------------------------------------ At layer index 23 ----------------------------------- 
+ 
+layer names are  encoder.5.1.bias encoder.5.1.bias
+Previous layer shape is  torch.Size([1024])
+Current layer shape is  torch.Size([1024])
+let's see the difference in layer names encoder.5.1.bias encoder.5.1 encoder.5.1
+torch.Size([64, 1024, 1, 1]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([1024, 1, 1, 64])
+handling bias term
+In layer encoder.5.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 0.398122638463974, Mean : 0.3174924850463867, Min : 0.2509309649467468, Std: 0.0309605672955513
+shape of layer: model 0 torch.Size([1024])
+shape of layer: model 1 torch.Size([1024])
+shape of activations: model 0 torch.Size([1024, 1, 1, 64])
+shape of activations: model 1 torch.Size([1024, 1, 1, 64])
+shape of previous transport map torch.Size([1024, 1024])
+
+------------------------------------ At layer index 24 ----------------------------------- 
+ 
+layer names are  fc_mu.weight fc_mu.weight
+Previous layer shape is  torch.Size([1024])
+Current layer shape is  torch.Size([64, 1024])
+let's see the difference in layer names fc_mu.weight fc_mu fc_mu
+torch.Size([64, 64]) shape of activations generally
+Current activation shape:  torch.Size([64, 64])
+In layer fc_mu.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 1.0496387481689453, Mean : 0.3297542333602905, Min : 0.1280289888381958, Std: 0.2787216305732727
+shape of layer: model 0 torch.Size([64, 1024])
+shape of layer: model 1 torch.Size([64, 1024])
+shape of activations: model 0 torch.Size([64, 64])
+shape of activations: model 1 torch.Size([64, 64])
+shape of previous transport map torch.Size([1024, 1024])
+returns a uniform measure of cardinality:  64
+returns a uniform measure of cardinality:  64
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features in 0 is   64
+# of ground metric features in 1 is   64
+ground metric (m0) is  tensor([[1.4808e-04, 3.9857e-01, 6.3504e-05,  ..., 7.2643e-05, 1.9593e-04,
+         1.2107e-04],
+        [1.5582e-04, 3.9854e-01, 7.7062e-05,  ..., 7.9426e-05, 2.0633e-04,
+         1.3212e-04],
+        [1.5223e-04, 3.9903e-01, 8.4648e-05,  ..., 7.4587e-05, 2.1043e-04,
+         1.3154e-04],
+        ...,
+        [1.1547e-04, 3.9817e-01, 7.7392e-05,  ..., 5.3711e-05, 1.7541e-04,
+         9.8188e-05],
+        [1.1316e-04, 3.9855e-01, 6.2801e-05,  ..., 4.7196e-05, 1.6624e-04,
+         9.8815e-05],
+        [1.0385e-04, 3.9791e-01, 6.0857e-05,  ..., 4.5126e-05, 1.4496e-04,
+         9.3384e-05]], device='cuda:0')
+mu shape:  (64,)  nu shape:  (64,)  M0 shape:  torch.Size([64, 64])
+shape of T_var is  torch.Size([64, 64])
+T_var before correction  tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.]], device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0., device='cuda:0')
+Here, trace is 0.0 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([64, 1024])
+Shape of fc_layer0_weight_data is  torch.Size([64, 1024])
+
+------------------------------------ At layer index 25 ----------------------------------- 
+ 
+layer names are  fc_mu.bias fc_mu.bias
+Previous layer shape is  torch.Size([64, 1024])
+Current layer shape is  torch.Size([64])
+let's see the difference in layer names fc_mu.bias fc_mu fc_mu
+torch.Size([64, 64]) shape of activations generally
+Current activation shape:  torch.Size([64, 64])
+handling bias term
+In layer fc_mu.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 1.0496387481689453, Mean : 0.3297542333602905, Min : 0.1280289888381958, Std: 0.2787216305732727
+shape of layer: model 0 torch.Size([64])
+shape of layer: model 1 torch.Size([64])
+shape of activations: model 0 torch.Size([64, 64])
+shape of activations: model 1 torch.Size([64, 64])
+shape of previous transport map torch.Size([64, 64])
+
+------------------------------------ At layer index 26 ----------------------------------- 
+ 
+layer names are  fc_var.weight fc_var.weight
+Previous layer shape is  torch.Size([64])
+Current layer shape is  torch.Size([64, 1024])
+let's see the difference in layer names fc_var.weight fc_var fc_var
+torch.Size([64, 64]) shape of activations generally
+Current activation shape:  torch.Size([64, 64])
+In layer fc_var.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 38.38816833496094, Mean : 8.600486755371094, Min : 0.06043341010808945, Std: 9.592645645141602
+Var layer should use the T computed before the mu layer
+shape of layer: model 0 torch.Size([64, 1024])
+shape of layer: model 1 torch.Size([64, 1024])
+shape of activations: model 0 torch.Size([64, 64])
+shape of activations: model 1 torch.Size([64, 64])
+shape of previous transport map torch.Size([1024, 1024])
+returns a uniform measure of cardinality:  64
+returns a uniform measure of cardinality:  64
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features in 0 is   64
+# of ground metric features in 1 is   64
+ground metric (m0) is  tensor([[4.1429e-06, 6.1358e+00, 1.1530e-04,  ..., 2.3321e-05, 9.8671e-06,
+         1.9517e-05],
+        [3.9141e-06, 6.1358e+00, 1.1716e-04,  ..., 2.4263e-05, 9.5055e-06,
+         1.8940e-05],
+        [5.1178e-06, 6.1358e+00, 1.1094e-04,  ..., 2.1547e-05, 1.1215e-05,
+         2.1529e-05],
+        ...,
+        [4.7484e-06, 6.1358e+00, 1.1191e-04,  ..., 2.1927e-05, 1.0785e-05,
+         2.0729e-05],
+        [5.6732e-06, 6.1358e+00, 1.0833e-04,  ..., 2.0377e-05, 1.2051e-05,
+         2.2509e-05],
+        [4.3192e-06, 6.1358e+00, 1.1469e-04,  ..., 2.3226e-05, 1.0124e-05,
+         1.9687e-05]], device='cuda:0')
+mu shape:  (64,)  nu shape:  (64,)  M0 shape:  torch.Size([64, 64])
+shape of T_var is  torch.Size([64, 64])
+T_var before correction  tensor([[0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0156]],
+       device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.0156, device='cuda:0')
+Here, trace is 0.015625 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([64, 1024])
+Shape of fc_layer0_weight_data is  torch.Size([64, 1024])
+
+------------------------------------ At layer index 27 ----------------------------------- 
+ 
+layer names are  fc_var.bias fc_var.bias
+Previous layer shape is  torch.Size([64, 1024])
+Current layer shape is  torch.Size([64])
+let's see the difference in layer names fc_var.bias fc_var fc_var
+torch.Size([64, 64]) shape of activations generally
+Current activation shape:  torch.Size([64, 64])
+handling bias term
+In layer fc_var.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 38.38816833496094, Mean : 8.600486755371094, Min : 0.06043341010808945, Std: 9.592645645141602
+shape of layer: model 0 torch.Size([64])
+shape of layer: model 1 torch.Size([64])
+shape of activations: model 0 torch.Size([64, 64])
+shape of activations: model 1 torch.Size([64, 64])
+shape of previous transport map torch.Size([64, 64])
+
+------------------------------------ At layer index 28 ----------------------------------- 
+ 
+layer names are  decoder_input.weight decoder_input.weight
+Previous layer shape is  torch.Size([64])
+Current layer shape is  torch.Size([1024, 64])
+let's see the difference in layer names decoder_input.weight decoder_input decoder_input
+torch.Size([64, 1024]) shape of activations generally
+Current activation shape:  torch.Size([1024, 64])
+In layer decoder_input.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 27.082433700561523, Mean : 10.929007530212402, Min : 2.4067864418029785, Std: 5.017793655395508
+handle the reparameter branch which contains two T
+gamma: tensor(0.0260, device='cuda:0')
+shape of layer: model 0 torch.Size([1024, 64])
+shape of layer: model 1 torch.Size([1024, 64])
+shape of activations: model 0 torch.Size([1024, 64])
+shape of activations: model 1 torch.Size([1024, 64])
+shape of previous transport map torch.Size([64, 64])
+returns a uniform measure of cardinality:  1024
+returns a uniform measure of cardinality:  1024
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features in 0 is   64
+# of ground metric features in 1 is   64
+ground metric (m0) is  tensor([[4.3505, 5.8408, 5.1930,  ..., 5.6063, 5.1851, 3.4078],
+        [3.1012, 4.5263, 3.3118,  ..., 4.1092, 2.9565, 3.6531],
+        [3.5949, 3.8440, 2.3288,  ..., 3.2043, 2.6053, 4.2820],
+        ...,
+        [4.7095, 1.6968, 3.7487,  ..., 2.8875, 3.6742, 5.2711],
+        [3.6709, 3.5333, 1.9438,  ..., 2.9277, 2.2529, 4.4089],
+        [2.3514, 5.1479, 4.2660,  ..., 4.8441, 4.2180, 2.5270]],
+       device='cuda:0')
+mu shape:  (1024,)  nu shape:  (1024,)  M0 shape:  torch.Size([1024, 1024])
+shape of T_var is  torch.Size([1024, 1024])
+T_var before correction  tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.]], device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.0039, device='cuda:0')
+Here, trace is 0.00390625 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([1024, 64])
+Shape of fc_layer0_weight_data is  torch.Size([1024, 64])
+
+------------------------------------ At layer index 29 ----------------------------------- 
+ 
+layer names are  decoder_input.bias decoder_input.bias
+Previous layer shape is  torch.Size([1024, 64])
+Current layer shape is  torch.Size([1024])
+let's see the difference in layer names decoder_input.bias decoder_input decoder_input
+torch.Size([64, 1024]) shape of activations generally
+Current activation shape:  torch.Size([1024, 64])
+handling bias term
+In layer decoder_input.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 27.082433700561523, Mean : 10.929007530212402, Min : 2.4067864418029785, Std: 5.017793655395508
+shape of layer: model 0 torch.Size([1024])
+shape of layer: model 1 torch.Size([1024])
+shape of activations: model 0 torch.Size([1024, 64])
+shape of activations: model 1 torch.Size([1024, 64])
+shape of previous transport map torch.Size([1024, 1024])
+
+------------------------------------ At layer index 30 ----------------------------------- 
+ 
+layer names are  decoder.0.0.weight decoder.0.0.weight
+Previous layer shape is  torch.Size([1024])
+Current layer shape is  torch.Size([1024, 512, 3, 3])
+let's see the difference in layer names decoder.0.0.weight decoder.0.0 decoder.0.0
+torch.Size([64, 512, 2, 2]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([512, 2, 2, 64])
+In layer decoder.0.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 323.2281188964844, Mean : 236.78431701660156, Min : 157.3700714111328, Std: 34.79247283935547
+shape of layer: model 0 torch.Size([512, 1024, 9])
+shape of layer: model 1 torch.Size([512, 1024, 9])
+shape of activations: model 0 torch.Size([512, 2, 2, 64])
+shape of activations: model 1 torch.Size([512, 2, 2, 64])
+shape of previous transport map torch.Size([1024, 1024])
+returns a uniform measure of cardinality:  512
+returns a uniform measure of cardinality:  512
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  256
+# of ground metric features in 0 is   256
+# of ground metric features in 1 is   256
+ground metric (m0) is  tensor([[16.4017, 14.7179, 16.1715,  ..., 16.4458, 15.8829, 16.2336],
+        [16.5573, 16.4594, 16.7053,  ..., 16.7252, 16.6312, 16.2903],
+        [16.2639, 15.9872, 15.8986,  ..., 16.3986, 16.2613, 16.5610],
+        ...,
+        [13.7661, 14.7370, 13.1105,  ..., 13.8255, 13.4120, 14.5907],
+        [14.9998, 15.1450, 15.3389,  ..., 15.2463, 14.9520, 14.2328],
+        [16.5653, 16.9941, 16.8887,  ..., 16.6526, 16.7728, 16.2201]],
+       device='cuda:0')
+mu shape:  (512,)  nu shape:  (512,)  M0 shape:  torch.Size([512, 512])
+shape of T_var is  torch.Size([512, 512])
+T_var before correction  tensor([[0.0000, 0.0020, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000]],
+       device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.0020, device='cuda:0')
+Here, trace is 0.001953125 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([512, 1024, 9])
+Shape of fc_layer0_weight_data is  torch.Size([512, 1024, 9])
+
+------------------------------------ At layer index 31 ----------------------------------- 
+ 
+layer names are  decoder.0.0.bias decoder.0.0.bias
+Previous layer shape is  torch.Size([1024, 512, 3, 3])
+Current layer shape is  torch.Size([512])
+let's see the difference in layer names decoder.0.0.bias decoder.0.0 decoder.0.0
+torch.Size([64, 512, 2, 2]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([512, 2, 2, 64])
+handling bias term
+In layer decoder.0.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 323.2281188964844, Mean : 236.78431701660156, Min : 157.3700714111328, Std: 34.79247283935547
+shape of layer: model 0 torch.Size([512])
+shape of layer: model 1 torch.Size([512])
+shape of activations: model 0 torch.Size([512, 2, 2, 64])
+shape of activations: model 1 torch.Size([512, 2, 2, 64])
+shape of previous transport map torch.Size([512, 512])
+
+------------------------------------ At layer index 32 ----------------------------------- 
+ 
+layer names are  decoder.0.1.weight decoder.0.1.weight
+Previous layer shape is  torch.Size([512])
+Current layer shape is  torch.Size([512])
+let's see the difference in layer names decoder.0.1.weight decoder.0.1 decoder.0.1
+torch.Size([64, 512, 2, 2]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([512, 2, 2, 64])
+handling bias term
+In layer decoder.0.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 1.2159782648086548, Mean : 0.9138838052749634, Min : 0.6348743438720703, Std: 0.12118829786777496
+shape of layer: model 0 torch.Size([512])
+shape of layer: model 1 torch.Size([512])
+shape of activations: model 0 torch.Size([512, 2, 2, 64])
+shape of activations: model 1 torch.Size([512, 2, 2, 64])
+shape of previous transport map torch.Size([512, 512])
+
+------------------------------------ At layer index 33 ----------------------------------- 
+ 
+layer names are  decoder.0.1.bias decoder.0.1.bias
+Previous layer shape is  torch.Size([512])
+Current layer shape is  torch.Size([512])
+let's see the difference in layer names decoder.0.1.bias decoder.0.1 decoder.0.1
+torch.Size([64, 512, 2, 2]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([512, 2, 2, 64])
+handling bias term
+In layer decoder.0.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 1.2159782648086548, Mean : 0.9138838052749634, Min : 0.6348743438720703, Std: 0.12118829786777496
+shape of layer: model 0 torch.Size([512])
+shape of layer: model 1 torch.Size([512])
+shape of activations: model 0 torch.Size([512, 2, 2, 64])
+shape of activations: model 1 torch.Size([512, 2, 2, 64])
+shape of previous transport map torch.Size([512, 512])
+
+------------------------------------ At layer index 34 ----------------------------------- 
+ 
+layer names are  decoder.1.0.weight decoder.1.0.weight
+Previous layer shape is  torch.Size([512])
+Current layer shape is  torch.Size([512, 256, 3, 3])
+let's see the difference in layer names decoder.1.0.weight decoder.1.0 decoder.1.0
+torch.Size([64, 256, 4, 4]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([256, 4, 4, 64])
+In layer decoder.1.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 25.881742477416992, Mean : 21.458904266357422, Min : 17.774871826171875, Std: 1.7116693258285522
+shape of layer: model 0 torch.Size([256, 512, 9])
+shape of layer: model 1 torch.Size([256, 512, 9])
+shape of activations: model 0 torch.Size([256, 4, 4, 64])
+shape of activations: model 1 torch.Size([256, 4, 4, 64])
+shape of previous transport map torch.Size([512, 512])
+returns a uniform measure of cardinality:  256
+returns a uniform measure of cardinality:  256
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  1024
+# of ground metric features in 0 is   1024
+# of ground metric features in 1 is   1024
+ground metric (m0) is  tensor([[ 9.9248, 10.1740, 10.1611,  ..., 12.4819, 10.5057, 10.8117],
+        [11.2730, 11.0958, 11.4285,  ..., 12.7264, 11.5317, 11.5808],
+        [12.2785, 12.5425, 12.3045,  ..., 12.5934, 12.4968, 12.8229],
+        ...,
+        [12.0546, 12.0050, 11.9930,  ..., 12.1519, 12.1089, 12.2606],
+        [ 9.8191, 10.5724, 10.7375,  ..., 12.1583, 10.5683, 11.4082],
+        [11.9083, 11.9914, 11.9626,  ..., 12.6338, 11.9263, 12.2748]],
+       device='cuda:0')
+mu shape:  (256,)  nu shape:  (256,)  M0 shape:  torch.Size([256, 256])
+shape of T_var is  torch.Size([256, 256])
+T_var before correction  tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.]], device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.0039, device='cuda:0')
+Here, trace is 0.00390625 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([256, 512, 9])
+Shape of fc_layer0_weight_data is  torch.Size([256, 512, 9])
+
+------------------------------------ At layer index 35 ----------------------------------- 
+ 
+layer names are  decoder.1.0.bias decoder.1.0.bias
+Previous layer shape is  torch.Size([512, 256, 3, 3])
+Current layer shape is  torch.Size([256])
+let's see the difference in layer names decoder.1.0.bias decoder.1.0 decoder.1.0
+torch.Size([64, 256, 4, 4]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([256, 4, 4, 64])
+handling bias term
+In layer decoder.1.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 25.881742477416992, Mean : 21.458904266357422, Min : 17.774871826171875, Std: 1.7116693258285522
+shape of layer: model 0 torch.Size([256])
+shape of layer: model 1 torch.Size([256])
+shape of activations: model 0 torch.Size([256, 4, 4, 64])
+shape of activations: model 1 torch.Size([256, 4, 4, 64])
+shape of previous transport map torch.Size([256, 256])
+
+------------------------------------ At layer index 36 ----------------------------------- 
+ 
+layer names are  decoder.1.1.weight decoder.1.1.weight
+Previous layer shape is  torch.Size([256])
+Current layer shape is  torch.Size([256])
+let's see the difference in layer names decoder.1.1.weight decoder.1.1 decoder.1.1
+torch.Size([64, 256, 4, 4]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([256, 4, 4, 64])
+handling bias term
+In layer decoder.1.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 1.842557668685913, Mean : 1.528344988822937, Min : 1.2510886192321777, Std: 0.12486813217401505
+shape of layer: model 0 torch.Size([256])
+shape of layer: model 1 torch.Size([256])
+shape of activations: model 0 torch.Size([256, 4, 4, 64])
+shape of activations: model 1 torch.Size([256, 4, 4, 64])
+shape of previous transport map torch.Size([256, 256])
+
+------------------------------------ At layer index 37 ----------------------------------- 
+ 
+layer names are  decoder.1.1.bias decoder.1.1.bias
+Previous layer shape is  torch.Size([256])
+Current layer shape is  torch.Size([256])
+let's see the difference in layer names decoder.1.1.bias decoder.1.1 decoder.1.1
+torch.Size([64, 256, 4, 4]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([256, 4, 4, 64])
+handling bias term
+In layer decoder.1.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 1.842557668685913, Mean : 1.528344988822937, Min : 1.2510886192321777, Std: 0.12486813217401505
+shape of layer: model 0 torch.Size([256])
+shape of layer: model 1 torch.Size([256])
+shape of activations: model 0 torch.Size([256, 4, 4, 64])
+shape of activations: model 1 torch.Size([256, 4, 4, 64])
+shape of previous transport map torch.Size([256, 256])
+
+------------------------------------ At layer index 38 ----------------------------------- 
+ 
+layer names are  decoder.2.0.weight decoder.2.0.weight
+Previous layer shape is  torch.Size([256])
+Current layer shape is  torch.Size([256, 128, 3, 3])
+let's see the difference in layer names decoder.2.0.weight decoder.2.0 decoder.2.0
+torch.Size([64, 128, 8, 8]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([128, 8, 8, 64])
+In layer decoder.2.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 17.420169830322266, Mean : 14.771629333496094, Min : 12.66779613494873, Std: 1.0087096691131592
+shape of layer: model 0 torch.Size([128, 256, 9])
+shape of layer: model 1 torch.Size([128, 256, 9])
+shape of activations: model 0 torch.Size([128, 8, 8, 64])
+shape of activations: model 1 torch.Size([128, 8, 8, 64])
+shape of previous transport map torch.Size([256, 256])
+returns a uniform measure of cardinality:  128
+returns a uniform measure of cardinality:  128
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  4096
+# of ground metric features in 0 is   4096
+# of ground metric features in 1 is   4096
+ground metric (m0) is  tensor([[11.2505, 11.4582, 11.2156,  ..., 11.3698, 10.9989, 11.4677],
+        [11.3953, 11.5501, 11.4086,  ..., 11.3480, 11.4388, 11.4296],
+        [11.1325, 11.2393, 10.7402,  ..., 10.6926, 11.6225, 10.9815],
+        ...,
+        [10.8150, 10.7364, 10.2102,  ...,  9.7640, 10.9783, 10.7709],
+        [11.6350, 11.7835, 11.7865,  ..., 11.7131, 11.5993, 11.7362],
+        [12.3121, 12.5319, 12.5334,  ..., 12.5570, 12.4995, 12.4275]],
+       device='cuda:0')
+mu shape:  (128,)  nu shape:  (128,)  M0 shape:  torch.Size([128, 128])
+shape of T_var is  torch.Size([128, 128])
+T_var before correction  tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.]], device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.0469, device='cuda:0')
+Here, trace is 0.046875 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([128, 256, 9])
+Shape of fc_layer0_weight_data is  torch.Size([128, 256, 9])
+
+------------------------------------ At layer index 39 ----------------------------------- 
+ 
+layer names are  decoder.2.0.bias decoder.2.0.bias
+Previous layer shape is  torch.Size([256, 128, 3, 3])
+Current layer shape is  torch.Size([128])
+let's see the difference in layer names decoder.2.0.bias decoder.2.0 decoder.2.0
+torch.Size([64, 128, 8, 8]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([128, 8, 8, 64])
+handling bias term
+In layer decoder.2.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 17.420169830322266, Mean : 14.771629333496094, Min : 12.66779613494873, Std: 1.0087096691131592
+shape of layer: model 0 torch.Size([128])
+shape of layer: model 1 torch.Size([128])
+shape of activations: model 0 torch.Size([128, 8, 8, 64])
+shape of activations: model 1 torch.Size([128, 8, 8, 64])
+shape of previous transport map torch.Size([128, 128])
+
+------------------------------------ At layer index 40 ----------------------------------- 
+ 
+layer names are  decoder.2.1.weight decoder.2.1.weight
+Previous layer shape is  torch.Size([128])
+Current layer shape is  torch.Size([128])
+let's see the difference in layer names decoder.2.1.weight decoder.2.1 decoder.2.1
+torch.Size([64, 128, 8, 8]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([128, 8, 8, 64])
+handling bias term
+In layer decoder.2.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 2.7685787677764893, Mean : 2.3775532245635986, Min : 2.0499167442321777, Std: 0.1521247923374176
+shape of layer: model 0 torch.Size([128])
+shape of layer: model 1 torch.Size([128])
+shape of activations: model 0 torch.Size([128, 8, 8, 64])
+shape of activations: model 1 torch.Size([128, 8, 8, 64])
+shape of previous transport map torch.Size([128, 128])
+
+------------------------------------ At layer index 41 ----------------------------------- 
+ 
+layer names are  decoder.2.1.bias decoder.2.1.bias
+Previous layer shape is  torch.Size([128])
+Current layer shape is  torch.Size([128])
+let's see the difference in layer names decoder.2.1.bias decoder.2.1 decoder.2.1
+torch.Size([64, 128, 8, 8]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([128, 8, 8, 64])
+handling bias term
+In layer decoder.2.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 2.7685787677764893, Mean : 2.3775532245635986, Min : 2.0499167442321777, Std: 0.1521247923374176
+shape of layer: model 0 torch.Size([128])
+shape of layer: model 1 torch.Size([128])
+shape of activations: model 0 torch.Size([128, 8, 8, 64])
+shape of activations: model 1 torch.Size([128, 8, 8, 64])
+shape of previous transport map torch.Size([128, 128])
+
+------------------------------------ At layer index 42 ----------------------------------- 
+ 
+layer names are  decoder.3.0.weight decoder.3.0.weight
+Previous layer shape is  torch.Size([128])
+Current layer shape is  torch.Size([128, 64, 3, 3])
+let's see the difference in layer names decoder.3.0.weight decoder.3.0 decoder.3.0
+torch.Size([64, 64, 16, 16]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([64, 16, 16, 64])
+In layer decoder.3.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 22.96883201599121, Mean : 19.870126724243164, Min : 17.40629768371582, Std: 1.1827096939086914
+shape of layer: model 0 torch.Size([64, 128, 9])
+shape of layer: model 1 torch.Size([64, 128, 9])
+shape of activations: model 0 torch.Size([64, 16, 16, 64])
+shape of activations: model 1 torch.Size([64, 16, 16, 64])
+shape of previous transport map torch.Size([128, 128])
+returns a uniform measure of cardinality:  64
+returns a uniform measure of cardinality:  64
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  16384
+# of ground metric features in 0 is   16384
+# of ground metric features in 1 is   16384
+ground metric (m0) is  tensor([[12.1700, 11.9333, 12.4527,  ..., 12.2710, 12.7054, 13.3373],
+        [13.0490, 12.4596, 13.5885,  ..., 13.0225, 13.1332, 13.6322],
+        [12.6760, 12.8688, 11.8888,  ..., 13.0961, 12.9782, 13.9021],
+        ...,
+        [12.2148, 11.5757, 12.5231,  ..., 11.6910, 12.2275, 13.2116],
+        [13.1229, 12.5173, 13.4003,  ..., 12.9615, 13.2198, 13.8521],
+        [12.4189, 12.7527, 13.0741,  ..., 12.9323, 12.0834, 13.4862]],
+       device='cuda:0')
+mu shape:  (64,)  nu shape:  (64,)  M0 shape:  torch.Size([64, 64])
+shape of T_var is  torch.Size([64, 64])
+T_var before correction  tensor([[0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0156,  ..., 0.0000, 0.0000, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0156, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000]],
+       device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.1562, device='cuda:0')
+Here, trace is 0.15625 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([64, 128, 9])
+Shape of fc_layer0_weight_data is  torch.Size([64, 128, 9])
+
+------------------------------------ At layer index 43 ----------------------------------- 
+ 
+layer names are  decoder.3.0.bias decoder.3.0.bias
+Previous layer shape is  torch.Size([128, 64, 3, 3])
+Current layer shape is  torch.Size([64])
+let's see the difference in layer names decoder.3.0.bias decoder.3.0 decoder.3.0
+torch.Size([64, 64, 16, 16]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([64, 16, 16, 64])
+handling bias term
+In layer decoder.3.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 22.96883201599121, Mean : 19.870126724243164, Min : 17.40629768371582, Std: 1.1827096939086914
+shape of layer: model 0 torch.Size([64])
+shape of layer: model 1 torch.Size([64])
+shape of activations: model 0 torch.Size([64, 16, 16, 64])
+shape of activations: model 1 torch.Size([64, 16, 16, 64])
+shape of previous transport map torch.Size([64, 64])
+
+------------------------------------ At layer index 44 ----------------------------------- 
+ 
+layer names are  decoder.3.1.weight decoder.3.1.weight
+Previous layer shape is  torch.Size([64])
+Current layer shape is  torch.Size([64])
+let's see the difference in layer names decoder.3.1.weight decoder.3.1 decoder.3.1
+torch.Size([64, 64, 16, 16]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([64, 16, 16, 64])
+handling bias term
+In layer decoder.3.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 4.101072788238525, Mean : 3.5865390300750732, Min : 3.171269416809082, Std: 0.19686444103717804
+shape of layer: model 0 torch.Size([64])
+shape of layer: model 1 torch.Size([64])
+shape of activations: model 0 torch.Size([64, 16, 16, 64])
+shape of activations: model 1 torch.Size([64, 16, 16, 64])
+shape of previous transport map torch.Size([64, 64])
+
+------------------------------------ At layer index 45 ----------------------------------- 
+ 
+layer names are  decoder.3.1.bias decoder.3.1.bias
+Previous layer shape is  torch.Size([64])
+Current layer shape is  torch.Size([64])
+let's see the difference in layer names decoder.3.1.bias decoder.3.1 decoder.3.1
+torch.Size([64, 64, 16, 16]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([64, 16, 16, 64])
+handling bias term
+In layer decoder.3.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 4.101072788238525, Mean : 3.5865390300750732, Min : 3.171269416809082, Std: 0.19686444103717804
+shape of layer: model 0 torch.Size([64])
+shape of layer: model 1 torch.Size([64])
+shape of activations: model 0 torch.Size([64, 16, 16, 64])
+shape of activations: model 1 torch.Size([64, 16, 16, 64])
+shape of previous transport map torch.Size([64, 64])
+
+------------------------------------ At layer index 46 ----------------------------------- 
+ 
+layer names are  decoder.4.0.weight decoder.4.0.weight
+Previous layer shape is  torch.Size([64])
+Current layer shape is  torch.Size([64, 32, 3, 3])
+let's see the difference in layer names decoder.4.0.weight decoder.4.0 decoder.4.0
+torch.Size([64, 32, 32, 32]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 32, 32, 64])
+In layer decoder.4.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 24.18647575378418, Mean : 20.46341323852539, Min : 17.73583984375, Std: 1.3804144859313965
+shape of layer: model 0 torch.Size([32, 64, 9])
+shape of layer: model 1 torch.Size([32, 64, 9])
+shape of activations: model 0 torch.Size([32, 32, 32, 64])
+shape of activations: model 1 torch.Size([32, 32, 32, 64])
+shape of previous transport map torch.Size([64, 64])
+returns a uniform measure of cardinality:  32
+returns a uniform measure of cardinality:  32
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  65536
+# of ground metric features in 0 is   65536
+# of ground metric features in 1 is   65536
+ground metric (m0) is  tensor([[14.4565, 14.6046, 14.4860,  ..., 14.3004, 14.3288, 14.4994],
+        [13.8576, 13.3725, 13.7861,  ..., 15.0348, 13.7388, 13.2681],
+        [12.7007, 12.2892, 12.6717,  ..., 14.5424, 12.6085, 12.1031],
+        ...,
+        [14.6014, 14.7200, 14.6604,  ..., 14.2481, 14.5823, 14.7473],
+        [13.4574, 12.9511, 13.3810,  ..., 14.8412, 13.3263, 12.7892],
+        [12.5198, 12.4061, 12.5497,  ..., 14.5249, 12.5586, 12.2456]],
+       device='cuda:0')
+mu shape:  (32,)  nu shape:  (32,)  M0 shape:  torch.Size([32, 32])
+shape of T_var is  torch.Size([32, 32])
+T_var before correction  tensor([[0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0312, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000]],
+       device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.2188, device='cuda:0')
+Here, trace is 0.21875 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([32, 64, 9])
+Shape of fc_layer0_weight_data is  torch.Size([32, 64, 9])
+
+------------------------------------ At layer index 47 ----------------------------------- 
+ 
+layer names are  decoder.4.0.bias decoder.4.0.bias
+Previous layer shape is  torch.Size([64, 32, 3, 3])
+Current layer shape is  torch.Size([32])
+let's see the difference in layer names decoder.4.0.bias decoder.4.0 decoder.4.0
+torch.Size([64, 32, 32, 32]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 32, 32, 64])
+handling bias term
+In layer decoder.4.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 24.18647575378418, Mean : 20.46341323852539, Min : 17.73583984375, Std: 1.3804144859313965
+shape of layer: model 0 torch.Size([32])
+shape of layer: model 1 torch.Size([32])
+shape of activations: model 0 torch.Size([32, 32, 32, 64])
+shape of activations: model 1 torch.Size([32, 32, 32, 64])
+shape of previous transport map torch.Size([32, 32])
+
+------------------------------------ At layer index 48 ----------------------------------- 
+ 
+layer names are  decoder.4.1.weight decoder.4.1.weight
+Previous layer shape is  torch.Size([32])
+Current layer shape is  torch.Size([32])
+let's see the difference in layer names decoder.4.1.weight decoder.4.1 decoder.4.1
+torch.Size([64, 32, 32, 32]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 32, 32, 64])
+handling bias term
+In layer decoder.4.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 5.200006484985352, Mean : 4.489605903625488, Min : 3.959808826446533, Std: 0.26348480582237244
+shape of layer: model 0 torch.Size([32])
+shape of layer: model 1 torch.Size([32])
+shape of activations: model 0 torch.Size([32, 32, 32, 64])
+shape of activations: model 1 torch.Size([32, 32, 32, 64])
+shape of previous transport map torch.Size([32, 32])
+
+------------------------------------ At layer index 49 ----------------------------------- 
+ 
+layer names are  decoder.4.1.bias decoder.4.1.bias
+Previous layer shape is  torch.Size([32])
+Current layer shape is  torch.Size([32])
+let's see the difference in layer names decoder.4.1.bias decoder.4.1 decoder.4.1
+torch.Size([64, 32, 32, 32]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 32, 32, 64])
+handling bias term
+In layer decoder.4.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 5.200006484985352, Mean : 4.489605903625488, Min : 3.959808826446533, Std: 0.26348480582237244
+shape of layer: model 0 torch.Size([32])
+shape of layer: model 1 torch.Size([32])
+shape of activations: model 0 torch.Size([32, 32, 32, 64])
+shape of activations: model 1 torch.Size([32, 32, 32, 64])
+shape of previous transport map torch.Size([32, 32])
+
+------------------------------------ At layer index 50 ----------------------------------- 
+ 
+layer names are  final_layer.0.weight final_layer.0.weight
+Previous layer shape is  torch.Size([32])
+Current layer shape is  torch.Size([32, 32, 3, 3])
+let's see the difference in layer names final_layer.0.weight final_layer.0 final_layer.0
+torch.Size([64, 32, 64, 64]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 64, 64, 64])
+In layer final_layer.0.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 25.59917449951172, Mean : 19.58768081665039, Min : 15.581558227539062, Std: 2.0881216526031494
+shape of layer: model 0 torch.Size([32, 32, 9])
+shape of layer: model 1 torch.Size([32, 32, 9])
+shape of activations: model 0 torch.Size([32, 64, 64, 64])
+shape of activations: model 1 torch.Size([32, 64, 64, 64])
+shape of previous transport map torch.Size([32, 32])
+returns a uniform measure of cardinality:  32
+returns a uniform measure of cardinality:  32
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  262144
+# of ground metric features in 0 is   262144
+# of ground metric features in 1 is   262144
+ground metric (m0) is  tensor([[15.0184, 15.6328, 16.0011,  ..., 15.3523, 16.0799, 15.0284],
+        [15.5505, 15.6755, 16.2362,  ..., 15.7032, 16.3111, 15.1709],
+        [15.7013, 15.0215, 14.1962,  ..., 15.3474, 14.8951, 15.6904],
+        ...,
+        [14.4755, 15.1387, 15.7341,  ..., 14.7352, 15.7752, 14.2018],
+        [15.8357, 15.4623, 15.7800,  ..., 15.6994, 14.9122, 15.9518],
+        [15.2132, 15.2977, 16.0031,  ..., 15.2151, 15.9986, 14.4438]],
+       device='cuda:0')
+mu shape:  (32,)  nu shape:  (32,)  M0 shape:  torch.Size([32, 32])
+shape of T_var is  torch.Size([32, 32])
+T_var before correction  tensor([[0.0312, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0312,  ..., 0.0000, 0.0000, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0312, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0312]],
+       device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(0.3438, device='cuda:0')
+Here, trace is 0.34375 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([32, 32, 9])
+Shape of fc_layer0_weight_data is  torch.Size([32, 32, 9])
+
+------------------------------------ At layer index 51 ----------------------------------- 
+ 
+layer names are  final_layer.0.bias final_layer.0.bias
+Previous layer shape is  torch.Size([32, 32, 3, 3])
+Current layer shape is  torch.Size([32])
+let's see the difference in layer names final_layer.0.bias final_layer.0 final_layer.0
+torch.Size([64, 32, 64, 64]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 64, 64, 64])
+handling bias term
+In layer final_layer.0.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 25.59917449951172, Mean : 19.58768081665039, Min : 15.581558227539062, Std: 2.0881216526031494
+shape of layer: model 0 torch.Size([32])
+shape of layer: model 1 torch.Size([32])
+shape of activations: model 0 torch.Size([32, 64, 64, 64])
+shape of activations: model 1 torch.Size([32, 64, 64, 64])
+shape of previous transport map torch.Size([32, 32])
+
+------------------------------------ At layer index 52 ----------------------------------- 
+ 
+layer names are  final_layer.1.weight final_layer.1.weight
+Previous layer shape is  torch.Size([32])
+Current layer shape is  torch.Size([32])
+let's see the difference in layer names final_layer.1.weight final_layer.1 final_layer.1
+torch.Size([64, 32, 64, 64]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 64, 64, 64])
+handling bias term
+In layer final_layer.1.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 2.1238410472869873, Mean : 1.6424989700317383, Min : 1.3274120092391968, Std: 0.1657819151878357
+shape of layer: model 0 torch.Size([32])
+shape of layer: model 1 torch.Size([32])
+shape of activations: model 0 torch.Size([32, 64, 64, 64])
+shape of activations: model 1 torch.Size([32, 64, 64, 64])
+shape of previous transport map torch.Size([32, 32])
+
+------------------------------------ At layer index 53 ----------------------------------- 
+ 
+layer names are  final_layer.1.bias final_layer.1.bias
+Previous layer shape is  torch.Size([32])
+Current layer shape is  torch.Size([32])
+let's see the difference in layer names final_layer.1.bias final_layer.1 final_layer.1
+torch.Size([64, 32, 64, 64]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([32, 64, 64, 64])
+handling bias term
+In layer final_layer.1.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 2.1238410472869873, Mean : 1.6424989700317383, Min : 1.3274120092391968, Std: 0.1657819151878357
+shape of layer: model 0 torch.Size([32])
+shape of layer: model 1 torch.Size([32])
+shape of activations: model 0 torch.Size([32, 64, 64, 64])
+shape of activations: model 1 torch.Size([32, 64, 64, 64])
+shape of previous transport map torch.Size([32, 32])
+
+------------------------------------ At layer index 54 ----------------------------------- 
+ 
+layer names are  final_layer.3.weight final_layer.3.weight
+Previous layer shape is  torch.Size([32])
+Current layer shape is  torch.Size([3, 32, 3, 3])
+let's see the difference in layer names final_layer.3.weight final_layer.3 final_layer.3
+torch.Size([64, 3, 64, 64]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([3, 64, 64, 64])
+In layer final_layer.3.weight: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 1.1489224433898926, Mean : 0.9610545039176941, Min : 0.788689911365509, Std: 0.07365009188652039
+shape of layer: model 0 torch.Size([3, 32, 9])
+shape of layer: model 1 torch.Size([3, 32, 9])
+shape of activations: model 0 torch.Size([3, 64, 64, 64])
+shape of activations: model 1 torch.Size([3, 64, 64, 64])
+shape of previous transport map torch.Size([32, 32])
+returns a uniform measure of cardinality:  3
+returns a uniform measure of cardinality:  3
+Refactored ground metric calc
+inside refactored
+Processing the coordinates to form ground_metric
+# of ground metric features is  262144
+# of ground metric features in 0 is   262144
+# of ground metric features in 1 is   262144
+ground metric (m0) is  tensor([[ 3.7828,  9.4258, 10.0350],
+        [ 9.4411,  3.4381,  7.3820],
+        [10.0442,  7.4563,  3.4390]], device='cuda:0')
+mu shape:  (3,)  nu shape:  (3,)  M0 shape:  torch.Size([3, 3])
+shape of T_var is  torch.Size([3, 3])
+T_var before correction  tensor([[0.3333, 0.0000, 0.0000],
+        [0.0000, 0.3333, 0.0000],
+        [0.0000, 0.0000, 0.3333]], device='cuda:0')
+Ratio of trace to the matrix sum:  tensor(1., device='cuda:0')
+Here, trace is 1.0 and matrix sum is 1.0 
+Shape of aligned wt is  torch.Size([3, 32, 9])
+Shape of fc_layer0_weight_data is  torch.Size([3, 32, 9])
+
+------------------------------------ At layer index 55 ----------------------------------- 
+ 
+layer names are  final_layer.3.bias final_layer.3.bias
+Previous layer shape is  torch.Size([3, 32, 3, 3])
+Current layer shape is  torch.Size([3])
+let's see the difference in layer names final_layer.3.bias final_layer.3 final_layer.3
+torch.Size([64, 3, 64, 64]) shape of activations generally
+reorder_dim is  [1, 2, 3, 0]
+Current activation shape:  torch.Size([3, 64, 64, 64])
+handling bias term
+In layer final_layer.3.bias: getting activation distance statistics
+Statistics of the distance from neurons of layer 1 (averaged across nodes of layer 0): 
+
+Max : 1.1489224433898926, Mean : 0.9610545039176941, Min : 0.788689911365509, Std: 0.07365009188652039
+shape of layer: model 0 torch.Size([3])
+shape of layer: model 1 torch.Size([3])
+shape of activations: model 0 torch.Size([3, 64, 64, 64])
+shape of activations: model 1 torch.Size([3, 64, 64, 64])
+shape of previous transport map torch.Size([3, 3])
+Initialize VanillaVAE track_running_stats:False bias:True
+{'loss': 0.10396075148421981, 'recon_loss': 0.10322251555342707, 'kl_loss': -2.952943758322646}

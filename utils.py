@@ -6,10 +6,10 @@ import collections
 import numpy as np
 import ot
 import sys
-PATH_TO_CIFAR = "./cifar/"
+PATH_TO_CIFAR = "./cifar/cifar"
 sys.path.append(PATH_TO_CIFAR)
 import train as cifar_train
-PATH_TO_VGG = "./cifar/models/"
+PATH_TO_VGG = "./cifar/cifar/models/"
 sys.path.append(PATH_TO_VGG)
 import vgg
 import partition

@@ -98,7 +98,7 @@ def compute_activations_across_models(args, models, train_loader, num_samples, d
                 # print("previously at layer {}: {}".format(name, activation[name]))
                 activation[name] = (num_samples_processed * activation[name] + output.detach()) / (
                         num_samples_processed + 1)
-            # print("now at layer {}: {}".format(name, activation[name]))
+            # print("now at layer {}: {}".format(name, activation[name].shape))
 
         return hook
 
@@ -117,6 +117,13 @@ def compute_activations_across_models(args, models, train_loader, num_samples, d
                 continue
             layer.register_forward_hook(get_activation(activations[idx], name))
             print("set forward hook for layer named: ", name)
+        
+        # for name, param in model.named_parameters():
+        #     if name == '':
+        #         print("excluded")
+        #         continue
+        #     param.register_forward_hook(get_activation(activations[idx], name))
+        #     print("set forward hook for layer named: ", name)
 
         # Set the model in train mode
         model.train()

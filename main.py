@@ -10,7 +10,7 @@ import sys
 import torch
 
 
-PATH_TO_CIFAR = "./cifar/"
+PATH_TO_CIFAR = "./cifar/cifar/"
 sys.path.append(PATH_TO_CIFAR)
 import train as cifar_train
 from tensorboardX import SummaryWriter
@@ -129,6 +129,7 @@ if __name__ == '__main__':
     # second_config is not needed here as well, since it's just used for the dataloader!
     print("Activation Timer start")
     st_time = time.perf_counter()
+    # get activations
     activations = utils.get_model_activations(args, models, config=config)
     end_time = time.perf_counter()
     setattr(args, 'activation_time', end_time - st_time)

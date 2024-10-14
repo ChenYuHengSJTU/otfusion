@@ -175,6 +175,7 @@ def get_parser():
                         help='Type of sinkhorn algorithm to consider.')
     parser.add_argument('--geom-ensemble-type', type=str, default='wts', choices=['wts', 'acts'],
                         help='Ensemble based on weights (wts) or activations (acts).')
+
     parser.add_argument('--act-bug', action='store_true',
                         help='simulate the bug in ground metric calc for act based averaging')
     parser.add_argument('--standardize-acts', action='store_true',
@@ -202,6 +203,7 @@ def get_parser():
 
     parser.add_argument('--same-model', action='store', type=int, default=-1, help='Index of the same model to average with itself')
     parser.add_argument('--dist-normalize', action='store_true', help='normalize distances by act num samples')
+
     parser.add_argument('--update-acts', action='store_true', help='update acts during the alignment of model0')
     parser.add_argument('--past-correction', action='store_true', help='use the current weights aligned by multiplying with past transport map')
     parser.add_argument('--partial-reshape', action='store_true', help='partially reshape the conv layers in ground metric calculation')
@@ -229,18 +231,24 @@ def get_parser():
                         help='get train loaders without any random transforms to ensure consistency')
     parser.add_argument('--reinit-trainloaders', action='store_true',
                         help='reinit train loader when starting retraining of each model!')
+
     parser.add_argument('--second-model-name', type=str, default=None, action='store', help='name of second model!')
     parser.add_argument('--print-distances', action='store_true', help='print OT distances for every layer')
     parser.add_argument('--deterministic', action='store_true', help='do retrain in deterministic mode!')
     parser.add_argument('--skip-retrain', type=int, default=-1, action='store', help='which of the original models to skip retraining')
+
+    # TODO
     parser.add_argument('--importance', type=str, default=None, action='store',
                         help='importance measure to use for building probab mass! (options, l1, l2, l11, l12)')
+
     parser.add_argument('--unbalanced', action='store_true', help='use unbalanced OT')
     parser.add_argument('--temperature', default=20, type=float, help='distillation temperature for (default: 20)')
     parser.add_argument('--alpha', default=0.7, type=float, help='weight towards distillation loss (default: 0.7)')
     parser.add_argument('--dist-epochs', default=60, type=int, help='number of distillation epochs')
 
     parser.add_argument('--handle-skips', action='store_true', help='handle shortcut skips in resnet which decrease dimension')
+    
+    parser.add_argument('--past_correction', action='store_true')
     return parser
 
 def get_parameters():

@@ -9,6 +9,7 @@ import math
 import sys
 import compute_activations
 
+
 def cost_matrix(x, y, p=2):
     "Returns the matrix of $|x_i-y_j|^p$."
     x_col = x.unsqueeze(1)
@@ -45,6 +46,7 @@ def get_histogram(args, idx, cardinality, layer_name, activations=None, return_n
 def get_wassersteinized_layers_modularized(args, networks, activations=None, eps=1e-7, test_loader=None):
     '''
     Two neural networks that have to be averaged in geometric manner (i.e. layerwise).
+
     The 1st network is aligned with respect to the other via wasserstein distance.
     Also this assumes that all the layers are either fully connected or convolutional *(with no bias)*
 
@@ -75,6 +77,12 @@ def get_wassersteinized_layers_modularized(args, networks, activations=None, eps
 
 
     num_layers = len(list(zip(networks[0].parameters(), networks[1].parameters())))
+    # named_parameters is an generator
+    # for linear layer with bias, the affine matrix and bias will be two separate terms in named_parameters
+    
+    # added definiation to deal with linear to convtranspose
+    is_conv = True
+    
     for idx, ((layer0_name, fc_layer0_weight), (layer1_name, fc_layer1_weight)) in \
             enumerate(zip(networks[0].named_parameters(), networks[1].named_parameters())):
 
@@ -90,10 +98,24 @@ def get_wassersteinized_layers_modularized(args, networks, activations=None, eps
 
         layer_shape = fc_layer0_weight.shape
         if len(layer_shape) > 2:
-            is_conv = True
             # For convolutional layers, it is (#out_channels, #in_channels, height, width)
             fc_layer0_weight_data = fc_layer0_weight.data.view(fc_layer0_weight.shape[0], fc_layer0_weight.shape[1], -1)
             fc_layer1_weight_data = fc_layer1_weight.data.view(fc_layer1_weight.shape[0], fc_layer1_weight.shape[1], -1)
+            
+            if is_conv is False and idx != 0:
+                print("Switching from linear layer to convtranspose layer!")
+                # could not use the following code to match the dimension of the two layers
+                # fc_layer0_weight_data = fc_layer0_weight.data.view(fc_layer0_weight.shape[0], T_var, -1).permute(2, 0, 1)
+                # fc_layer1_weight_data = fc_layer1_weight.data.view(fc_layer1_weight.shape[0], T_var, -1).permute(2, 0, 1)
+                
+                # the only way is to reshape the matrix T
+                # note that in pytorch, the shape for conv is (out, int, h, w), but for deconv is (in, out, h, w)
+                T_var = T_var.view(fc_layer0_weight.shape[0], fc_layer1_weight.shape[0], -1).mean(dim=-1)
+                fc_layer0_weight_data = fc_layer0_weight_data.permute(1, 0, 2)
+                fc_layer1_weight_data = fc_layer1_weight_data.permute(1, 0, 2)
+
+            is_conv = True
+
         else:
             is_conv = False
             fc_layer0_weight_data = fc_layer0_weight.data
@@ -127,8 +149,12 @@ def get_wassersteinized_layers_modularized(args, networks, activations=None, eps
                     fc_layer1_weight_data.view(fc_layer1_weight_data.shape[0], -1)
                 )
             else:
+                # deal with conv to linear also reshape operation which cause the tensor shape to change 
                 if fc_layer0_weight.data.shape[1] != T_var.shape[0]:
                     # Handles the switch from convolutional layers to fc layers
+                    # fc_layer0_weight.shape[0] -> out dim
+                    # fc_layer0_weight.shape[1] -> conv out channel * h * w <- flattened
+                    # T_var.shape[0] -> conv out channel
                     fc_layer0_unflattened = fc_layer0_weight.data.view(fc_layer0_weight.shape[0], T_var.shape[0], -1).permute(2, 0, 1)
                     aligned_wt = torch.bmm(
                         fc_layer0_unflattened,
@@ -304,6 +330,8 @@ def _check_activation_sizes(args, acts0, acts1):
         return acts0.shape[-1]/acts1.shape[-1] == args.width_ratio
 
 def process_activations(args, activations, layer0_name, layer1_name):
+    # B * out
+    # B * out_channel * h * w
     activations_0 = activations[0][layer0_name.replace('.' + layer0_name.split('.')[-1], '')].squeeze(1)
     activations_1 = activations[1][layer1_name.replace('.' + layer1_name.split('.')[-1], '')].squeeze(1)
 
@@ -318,6 +346,7 @@ def process_activations(args, activations, layer0_name, layer1_name):
     if len(activations_0.shape) == 2:
         activations_0 = activations_0.t()
         activations_1 = activations_1.t()
+    # for conv layer activation
     elif len(activations_0.shape) > 2:
         reorder_dim = [l for l in range(1, len(activations_0.shape))]
         reorder_dim.append(0)
@@ -332,10 +361,15 @@ def _reduce_layer_name(layer_name):
     # previous way assumed only one dot, so now I replace the stuff after last dot
     return layer_name.replace('.' + layer_name.split('.')[-1], '')
 
-def _get_layer_weights(layer_weight, is_conv):
-    if is_conv:
+def _get_layer_weights(layer_weight, is_conv, is_bias, is_deconv):
+    if is_conv and not is_deconv:
         # For convolutional layers, it is (#out_channels, #in_channels, height, width)
         layer_weight_data = layer_weight.data.view(layer_weight.shape[0], layer_weight.shape[1], -1)
+    elif is_deconv:
+        # layer_weight_data = layer_weight.data.view(layer_weight.shape[0], layer_weight.shape[1], -1)
+        layer_weight_data = layer_weight.data.view(layer_weight.shape[0], layer_weight.shape[1], -1).permute(1, 0, 2)
+    elif is_bias:
+        layer_weight_data = layer_weight.data
     else:
         layer_weight_data = layer_weight.data
 
@@ -343,6 +377,8 @@ def _get_layer_weights(layer_weight, is_conv):
 
 def _process_ground_metric_from_acts(args, is_conv, ground_metric_object, activations):
     print("inside refactored")
+    # also handle deconv case
+    # as activations of conv and deconv do not collide in shape
     if is_conv:
         if not args.gromov:
             M0 = ground_metric_object.process(activations[0].view(activations[0].shape[0], -1),
@@ -562,6 +598,8 @@ def _get_neuron_importance_histogram(args, layer_weight, is_conv, eps=1e-9):
     # assert importance_hist.sum() == 1.0
     return importance_hist
 
+
+
 def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps=1e-7, train_loader=None, test_loader=None):
     '''
     Average based on the activation vector over data samples. Obtain the transport map,
@@ -575,9 +613,14 @@ def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps
     :return: list of layer weights 'wassersteinized'
     '''
 
+    # activations: {'0':dict(),'1':dict()}
+    print(activations[0].keys())
+
 
     avg_aligned_layers = []
     T_var = None
+    
+    # for residual connections
     if args.handle_skips:
         skip_T_var = None
         skip_T_var_idx = -1
@@ -588,6 +631,7 @@ def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps
     # print(list(networks[0].parameters()))
     previous_layer_shape = None
     num_layers = len(list(zip(networks[0].parameters(), networks[1].parameters())))
+    print("number of layers is ", num_layers)
     ground_metric_object = GroundMetric(args)
 
     if args.update_acts or args.eval_aligned:
@@ -601,22 +645,35 @@ def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps
     networks_named_params = list(zip(networks[0].named_parameters(), networks[1].named_parameters()))
     idx = 0
     incoming_layer_aligned = True # for input
+
+    is_conv = False
+    is_bias = False
+    is_deconv = False
+
+    fc_mu_acts = None
+    fc_var_acts = None
+    fc_mu_T = None
+    fc_var_T = None
+    mu_var_T = None
+
     while idx < num_layers:
         ((layer0_name, fc_layer0_weight), (layer1_name, fc_layer1_weight)) = networks_named_params[idx]
     # for idx,  in \
     #         enumerate(zip(network0_named_params, network1_named_params)):
-        print("\n--------------- At layer index {} ------------- \n ".format(idx))
+        print("\n------------------------------------ At layer index {} ----------------------------------- \n ".format(idx))
+        print("layer names are ", layer0_name, layer1_name)
         # layer shape is out x in
         # assert fc_layer0_weight.shape == fc_layer1_weight.shape
         assert _check_layer_sizes(args, idx, fc_layer0_weight.shape, fc_layer1_weight.shape, num_layers)
         print("Previous layer shape is ", previous_layer_shape)
+        print("Current layer shape is ", fc_layer0_weight.shape)
         previous_layer_shape = fc_layer1_weight.shape
 
         # will have shape layer_size x act_num_samples
         layer0_name_reduced = _reduce_layer_name(layer0_name)
         layer1_name_reduced = _reduce_layer_name(layer1_name)
 
-        print("let's see the difference in layer names", layer0_name.replace('.' + layer0_name.split('.')[-1], ''), layer0_name_reduced)
+        print("let's see the difference in layer names", layer0_name, layer0_name.replace('.' + layer0_name.split('.')[-1], ''), layer0_name_reduced)
         print(activations[0][layer0_name.replace('.' + layer0_name.split('.')[-1], '')].shape, 'shape of activations generally')
         # for conv layer I need to make the act_num_samples dimension the last one, but it has the intermediate dimensions for
         # height and width of channels, so that won't work.
@@ -624,28 +681,84 @@ def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps
 
         activations_0, activations_1 = process_activations(args, activations, layer0_name, layer1_name)
 
+        print("Current activation shape: ", activations_0.shape)
+
         # print("activations for 1st model are ", activations_0)
         # print("activations for 2nd model are ", activations_1)
 
+        # add the corner case of convtransposed that activation.shape[0] != weight.shape[0]
+        assert activations_0.shape[0] == fc_layer0_weight.shape[0] or activations_0.shape[0] == fc_layer0_weight.shape[1]
+        assert activations_1.shape[0] == fc_layer1_weight.shape[0] or activations_1.shape[0] == fc_layer1_weight.shape[1]
 
-        assert activations_0.shape[0] == fc_layer0_weight.shape[0]
-        assert activations_1.shape[0] == fc_layer1_weight.shape[0]
+        # mu_cardinality = fc_layer0_weight.shape[0]
+        # nu_cardinality = fc_layer1_weight.shape[0]
 
-        mu_cardinality = fc_layer0_weight.shape[0]
-        nu_cardinality = fc_layer1_weight.shape[0]
-
-        get_activation_distance_stats(activations_0, activations_1, layer0_name)
+        # get_activation_distance_stats(activations_0, activations_1, layer0_name)
 
         layer0_shape = fc_layer0_weight.shape
         layer_shape = fc_layer1_weight.shape
+
         if len(layer_shape) > 2:
-            is_conv = True
+            if activations_0.shape[0] != fc_layer0_weight.shape[0]:
+                is_deconv = True
+                is_conv = True    
+                is_bias = False
+            else:
+                is_conv = True
+                is_bias = False
+                is_deconv = False
+        elif len(layer_shape) == 1:
+            is_bias = True
+            is_conv = False
+            is_deconv = False
+            print("handling bias term")
         else:
             is_conv = False
+            is_bias = False
+            is_deconv = False
 
-        fc_layer0_weight_data = _get_layer_weights(fc_layer0_weight, is_conv)
-        fc_layer1_weight_data = _get_layer_weights(fc_layer1_weight, is_conv)
+        # handle bias term
+        # if idx + 1 < num_layers:
+        #     ((layer0_name_next, fc_layer0_weight_next), (layer1_name_next, fc_layer1_weight_next)) = networks_named_params[idx + 1]
+        #     if len(fc_layer0_weight_next.shape) == 1:
+        #         assert len(fc_layer1_weight_next.shape) == 1
+        #         print("current activations has bias term")
+        #         if is_conv:
+        #             bias0 = fc_layer0_weight_next.data.reshape(-1, 1, 1)
+        #             bias1 = fc_layer1_weight_next.data.reshape(-1, 1, 1)
+        #         else:
+        #             bias0 = fc_layer0_weight_next.data
+        #             bias1 = fc_layer1_weight_next.data
+        #         activations_0 = activations_0 - bias0
+        #         activations_1 = activations_1 - bias1
 
+        if is_deconv:
+            mu_cardinality = fc_layer0_weight.shape[1]
+            nu_cardinality = fc_layer1_weight.shape[1]
+        else:
+            mu_cardinality = fc_layer0_weight.shape[0]
+            nu_cardinality = fc_layer1_weight.shape[0]
+
+        get_activation_distance_stats(activations_0, activations_1, layer0_name)
+
+        fc_layer0_weight_data = _get_layer_weights(fc_layer0_weight, is_conv, is_bias, is_deconv)
+        fc_layer1_weight_data = _get_layer_weights(fc_layer1_weight, is_conv, is_bias, is_deconv)
+
+        # do mu and var fusion
+        if fc_var_acts is not None and  fc_mu_acts is not None and 'bias' not in layer0_name:
+            print("handle the reparameter branch which contains two T")
+            gamma = torch.norm(fc_mu_acts, p=1) / (torch.norm(fc_mu_acts, p=1) + torch.norm(fc_var_acts, p=1))
+            print("gamma:", gamma)
+            gamma = 0.5
+            T_var = fc_mu_T * gamma + (1-gamma) * fc_var_T
+            fc_mu_acts = None
+            fc_var_acts = None
+        
+        if 'var' in layer0_name and 'bias' not in layer0_name:
+            assert mu_var_T is not None
+            print("Var layer should use the T computed before the mu layer")
+            T_var = mu_var_T
+        
         if idx == 0 or incoming_layer_aligned:
             aligned_wt = fc_layer0_weight_data
 
@@ -661,7 +774,7 @@ def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps
             print("shape of previous transport map", T_var.shape)
 
             # aligned_wt = None, this caches the tensor and causes OOM
-            if is_conv:
+            if is_conv and not is_deconv:
                 if args.handle_skips:
                     assert len(layer0_shape) == 4
                     # save skip_level transport map if there is block ahead
@@ -684,11 +797,34 @@ def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps
                             print("averaging multiple T_var's")
                         else:
                             print("doing nothing for skips")
+                
+                # handle the switch from fc layers to convtransposed layers
+                # there are two methods
+                # 1. align the dim according to fc layer（未必可以实现，维度可能无法正确匹配）
+                # 2. align the dim according to convtransposed layer（确保可以实现，但是是否有含义？）
+                # pay attention to the dim of the convtransposed layer's kernel -> (in_channel, out_channel, h, w)
+                # set the feature map to 1*1
+                # if fc_layer0_weight_data.shape[1] != T_var.shape[0]:
+                    # T_var_conv = T_var.view(-1, fc_layer0_weight_data.shape[0], fc_layer0_weight_data.shape[0])
+                    
+                # else:
                 T_var_conv = T_var.unsqueeze(0).repeat(fc_layer0_weight_data.shape[2], 1, 1)
                 aligned_wt = torch.bmm(fc_layer0_weight_data.permute(2, 0, 1), T_var_conv).permute(1, 2, 0)
 
+            # but maybe bias needs to be handled differently
+            elif is_bias:
+                assert fc_layer0_weight.data.shape[0] == T_var.shape[0]
+                aligned_wt = torch.matmul(fc_layer0_weight.data, T_var)
+
+                avg_aligned_layers.append((aligned_wt + fc_layer1_weight.data) * 0.5)
+                
+                idx += 1
+                continue
+
             else:
-                if fc_layer0_weight.data.shape[1] != T_var.shape[0]:
+                # 还原通道匹配
+                # unflatten the fc weights to match the T_var whose shape depends on previous conv layer
+                if fc_layer0_weight.data.shape[1] != T_var.shape[0] and not is_deconv:
                     # Handles the switch from convolutional layers to fc layers
                     # checks if the input has been reshaped
                     fc_layer0_unflattened = fc_layer0_weight.data.view(fc_layer0_weight.shape[0], T_var.shape[0],
@@ -699,7 +835,10 @@ def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps
                     ).permute(1, 2, 0)
                     aligned_wt = aligned_wt.contiguous().view(aligned_wt.shape[0], -1)
                 else:
-                    aligned_wt = torch.matmul(fc_layer0_weight.data, T_var)
+                    if is_deconv:
+                        aligned_wt = torch.matmul(fc_layer0_weight_data.permute(2, 0, 1), T_var).permute(1, 2, 0)
+                    else:
+                        aligned_wt = torch.matmul(fc_layer0_weight.data, T_var)
 
 
         #### Refactored ####
@@ -777,6 +916,12 @@ def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps
 
         print("ground metric (m0) is ", M0)
 
+        # T_store = T_var
+        if 'mu' in layer0_name:
+            if 'weight' in layer0_name:
+                mu_var_T = T_var
+        
+        print("mu shape: ", mu.shape, " nu shape: ", nu.shape, " M0 shape: ", M0.shape)
         T_var = _get_current_layer_transport_map(args, mu, nu, M0, M1, idx=idx, layer_shape=layer_shape, eps=eps, layer_name=layer0_name)
 
         T_var, marginals = _compute_marginals(args, T_var, device, eps=eps)
@@ -792,6 +937,7 @@ def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps
         print("Here, trace is {} and matrix sum is {} ".format(torch.trace(T_var), torch.sum(T_var)))
         setattr(args, 'trace_sum_ratio_{}'.format(layer0_name), (torch.trace(T_var) / torch.sum(T_var)).item())
 
+        # used
         if args.past_correction:
             print("Shape of aligned wt is ", aligned_wt.shape)
             print("Shape of fc_layer0_weight_data is ", fc_layer0_weight_data.shape)
@@ -806,7 +952,7 @@ def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps
             geometric_fc = (1 - args.ensemble_step) * t_fc0_model + \
                            args.ensemble_step * fc_layer1_weight_data.view(fc_layer1_weight_data.shape[0], -1)
         else:
-            geometric_fc = (t_fc0_model + fc_layer1_weight_data.view(fc_layer1_weight_data.shape[0], -1)) / 2
+            geometric_fc = (t_fc0_model + fc_layer1_weight_data.reshape(fc_layer1_weight_data.shape[0], -1)) / 2
         if is_conv and layer_shape != geometric_fc.shape:
             geometric_fc = geometric_fc.view(layer_shape)
         avg_aligned_layers.append(geometric_fc)
@@ -830,6 +976,16 @@ def get_acts_wassersteinized_layers_modularized(args, networks, activations, eps
             setattr(args, 'model0_aligned_acc_layer_{}'.format(str(idx)), acc)
             if idx == (num_layers - 1):
                 setattr(args, 'model0_aligned_acc', acc)
+        
+        if 'mu' in layer0_name and fc_mu_acts is None:
+            assert 'mu' in layer1_name
+            fc_mu_acts = activations_0
+            fc_mu_T = T_var
+        if 'var' in layer0_name and fc_var_acts is None:
+            assert 'var' in layer1_name
+            fc_var_acts = activations_0
+            fc_var_T = T_var
+            
 
         incoming_layer_aligned = False
         next_aligned_wt_reshaped = None
@@ -893,4 +1049,99 @@ def geometric_ensembling_modularized(args, networks, train_loader, test_loader, 
         avg_aligned_layers = get_acts_wassersteinized_layers_modularized(args, networks, activations, train_loader=train_loader, test_loader=test_loader)
         
     return get_network_from_param_list(args, avg_aligned_layers, test_loader)
+
+
+
+
+
+
+if __name__ == '__main__':
+    import parameters
+    args = parameters.get_parameters()
+    
+    import sys
+    # sys.path.append('/home/chenyuheng/PyTorch-VAE/')
+    # sys.path.append('/home/chenyuheng/PyTorch-VAE/models/')
+    # models/vanilla_vae.py
+    # from models.vanilla_vae import VanillaVAE
+    # from vanilla_vae import VanillaVAE
+    from vaes.vanilla_vae import VanillaVAE
+    
+    import compute_activations
+    
+    model1 = VanillaVAE(3, 64)
+    model2 = VanillaVAE(3, 64)
+    
+    dict1 = torch.load('vae_1*1_122.ckpt', map_location='cpu')['state_dict']
+    dict2 = torch.load('vae_1*1_125.ckpt', map_location='cpu')['state_dict']
+    tmp1 = dict()
+    tmp2 = dict()
+    
+    for k in dict1.keys():
+        v1 = dict1[k]
+        v2 = dict2[k]
+        k = k[6:]
+        tmp1[k] = v1
+        tmp2[k] = v2
+    
+    model1.load_state_dict(tmp1)
+    model2.load_state_dict(tmp2)
+    
+    # print(model1.named_modules())
+    # for name in model1.named_modules():
+        # print(name)
+    
+    from torchvision.datasets import CelebA
+    from torchvision import transforms
+    transforms = transforms.Compose([transforms.RandomHorizontalFlip(),
+                                                transforms.CenterCrop(148),
+                                                transforms.Resize((64, 64)),
+                                                transforms.ToTensor(),])
+
+    test_data = CelebA(root='/home/chenyuheng/celeba', split='test', download=False, transform=transforms) 
+    # influence of shuffle and batch size
+    # total samples = batch_size * args.act-num-samples
+    dataloader1 = torch.utils.data.DataLoader(test_data, batch_size=64, shuffle=True)
+    dataloader2 = torch.utils.data.DataLoader(test_data, batch_size=64, shuffle=True)
+    
+    # activations = compute_activations.compute_activations_across_models(args, [model1.cuda(args.gpu_id), model2.cuda(args.gpu_id)], dataloader1, args.act_num_samples)
+    # activations2 = compute_activations.compute_activations_across_models(args, model2, dataloader2, args.act_num_samples)
+
+    # avg_paras = get_acts_wassersteinized_layers_modularized(args, [model1, model2], activations, test_loader=dataloader1)
+
+    idx = 0
+    avg_dict = dict()
+    for k in dict1.keys():
+        k = k[6:]
+        # avg_dict[k] = avg_paras[idx]
+        idx += 1
+    
+    from tqdm import tqdm
+
+    def loaddata():
+        return torch.utils.data.DataLoader(test_data, batch_size=64, shuffle=True)   
+
+    def test(model):
+        model.cuda()
+        dataloader = loaddata()
+        i = 0
+        loss = 0.0
+        recon_loss = 0.0
+        kl_loss = 0.0
+        for img, _ in tqdm(dataloader):
+            # print(img)
+            out = model(img.cuda())
+            # loss = loss * (i / (i + 1)) + model.loss_function(*out, M_N=0.00025)['loss'].item() / (i + 1)
+            loss = loss * (i / (i + 1)) + model.loss_function(*out, M_N=0.00025)['loss'].item() / (i + 1)
+            recon_loss = recon_loss * (i / (i + 1)) + model.loss_function(*out, M_N=0.00025)['Reconstruction_Loss'].item() / (i + 1)
+            kl_loss = kl_loss * (i / (i + 1)) + model.loss_function(*out, M_N=0.00025)['KLD'].item() / (i + 1)
+            # loss = loss * (i / (i + 1)) + model.loss_function(*out, M_N=0.00025)['loss'].item() / (64 * (i + 1))
+            i += 1
+        return {'loss': loss, 'recon_loss': recon_loss, 'kl_loss': kl_loss}
+
+    # avg_model = VanillaVAE(3, 64)
+    # avg_model.load_state_dict(avg_dict)
+    # print(test(avg_model))
+    print(test(model1))
+    print(test(model2))
 

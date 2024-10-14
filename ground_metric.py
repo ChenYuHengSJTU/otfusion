@@ -61,8 +61,12 @@ class GroundMetric:
     def _cost_matrix_xy(self, x, y, p=2, squared = True):
         # TODO: Use this to guarantee reproducibility of previous results and then move onto better way
         "Returns the matrix of $|x_i-y_j|^p$."
+        # (n_l,1,n_{l-1})
         x_col = x.unsqueeze(1)
+        # (1, m_l, m_{l-1})
+        # math induction -> n_{l-1} == m_{l-1}
         y_lin = y.unsqueeze(0)
+        # c => (n_l, m_l, m_{l-1})
         c = torch.sum((torch.abs(x_col - y_lin)) ** p, 2)
         if not squared:
             print("dont leave off the squaring of the ground metric")
@@ -113,6 +117,7 @@ class GroundMetric:
                 - coordinates, p=2, dim=2
             )
         else:
+            # memory efficient version
             if self.mem_eff:
                 matrix = self._pairwise_distances(coordinates, other_coordinates, squared=self.squared)
             else:
